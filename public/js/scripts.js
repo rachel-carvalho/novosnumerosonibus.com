@@ -1,42 +1,66 @@
 $(document).ready(function(){
-  var inpt = $('#search input');
+  var inpts = $('#search input');
+  var prev_inpt = $('#search input#prev');
+  var curr_inpt = $('#search input#curr');
   var btn = $('#search button');
   
-  inpt.keydown(function(e) {
+  inpts.focus(function(){
+    if(this.id == prev_inpt.attr('id'))
+      curr_inpt.val('');
+    else if(this.id == curr_inpt.attr('id'))
+      prev_inpt.val('');
+  });
+  
+  inpts.keydown(function(e) {
     if (e.keyCode == 13)
       btn.click();
   });
 
   var table = $('table');
-  var templateRow = table.find('tbody tr:first').detach();
-  
-  renderLines(items, table, templateRow);
+  var template_row = table.find('tbody tr:first').detach();
   
   btn.click(function(){
-    var num = inpt.val().toLowerCase();
+    var num = prev_inpt.val().toLowerCase();
+    var prev = true;
+    if(!num) {
+      num = curr_inpt.val().toLowerCase();
+      prev = false;
+    }
+    else
+      location.href = '#' + num;
     
     var search_result = [];
 
     if(!num)
       search_result = items;
     else{
-      for(var i = 0; i < items.length; i++)
-        if(items[i].previous_number.toLowerCase() == num)
+      for(var i = 0; i < items.length; i++){
+        var item_num = prev ? items[i].previous_number : items[i].current_number;
+        if(item_num.toLowerCase() == num)
           search_result.push(items[i]);
+      }
     }
       
-    renderLines(search_result, table, templateRow);
+    render_lines(search_result, table, template_row);
   });
+  
+  if(location.hash && location.hash.length > 1) {
+    prev_inpt.val(location.hash.substring(1));
+    btn.click();
+  }
+  else {
+    render_lines(items, table, template_row);
+  }
 });
 
-function renderLines(items, table, templateRow){
+function render_lines(items, table, template_row){
   var tbody = table.find('tbody');
   
   tbody.empty();
   
   for(var i = 0; i < items.length; i++){
     var item = items[i];
-    var tr = templateRow.clone();
+    var tr = template_row.clone();
     
     tr.find('td.area').html(item.area);
     tr.find('td.prev-num').html(item.previous_number);
@@ -49,5 +73,4 @@ function renderLines(items, table, templateRow){
   
   if (items.length > 0)
     table.removeClass('hidden');
-
 }

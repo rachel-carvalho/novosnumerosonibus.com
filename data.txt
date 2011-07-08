@@ -1,0 +1,691 @@
+Consórcio A - Intersul
+- 120 Central - Prado Júnior | C
+- 129 Rodoviária - Praia de Botafogo (via Túnel santa Bárbara) | C
+- 411 Usina - Prado Júnior | C
+- 412 Usina - Praia de Botafogo (via Túnel santa Bárbara) | C
+- 420 Vila Isabel - Praia de Botafogo (via Túnel santa Bárbara) | C
+- 421 Vila Isabel - Prado Júnior | C
+- 423 Grajaú - Real Grandeza | C
+- 425 Grajaú - Real Grandeza (via Túnel santa Bárbara) | C
+- 467 Maracanã - Praia de Botafogo | C
+- 475 Méier - Prado Júnior | C
+- sn006 Castelo - santa Teresa | C
+010 010 Fátima - Central | C
+010 011 Fátima - Rodoviária Novo Rio | C
+107 107 Central - Urca |
+110 110 Rodoviária - Jardim de Alah (via Túnel Rebouças) | C
+110 111 Rodoviária - Jardim de Alah (via Elevado/Túnel Rebouças) | C
+119 119 Praça XV - Copacabana 121 121 Central - Copacabana | C
+123 123 Praça Mauá - Jardim de Alah | C
+125 124 Jardim Botanico (Horto) - Central (via Copacabana) |
+125 125 Central - General Osório (via Aterro do Flamengo) | C
+126 126 Rodoviária - Copacabana (via Túnel santa Bárbara) | C
+127 127 Rodoviária - Copacabana | C
+128 128 Rodoviária - Gávea (via Copacabana) |
+132 132 Central - Leblon (via Aterro do Flamengo) | C
+136 136 Rodoviária - Copacabana (via Leopoldina) | C
+154 154 Central - Ipanema |
+154 155 Central - Ipanema (via Túnel santa Bárbara) |
+157 157 Central - Gávea (via Lagoa e Leblon) |
+158 158 Central - Gávea | C
+170 170 Rodoviária - Gávea | C
+172 172 Rodoviária - Leblon (via Jóquei) | C
+173 173 Rodoviária - Leblon (via Túnel santa Bárbara) | C
+176 176 Central - são Conrado |
+176 186 Central - são Conrado (via Túnel santa Bárbara) |
+177 169 Praça Mauá - são Conrado (via Linha Amarela) |
+177 177 Praça Mauá - são Conrado |
+178 178 são Conrado - Rodoviária (via Central) |
+178 181 são Conrado - Rodoviária (via Linha Amarela) |
+180 180 Central - Cosme Velho (via Largo do Machado) |
+184 183 Central - Laranjeiras (via Túnel santa Bárbara) |
+184 184 Central - Laranjeiras |
+201 201 santa Alexandrina - Praça XV | C
+201 202 Rio Comprido - Praça XV | C
+206 006 silvestre - Castelo | C
+206 007 silvestre - Central | C
+209 209 Estácio - Caju (via são Cristóvão) | C
+210 210 Caju - Praça XV | C
+214 014 Paula Matos - Castelo | C
+217 217 Andaraí - Carioca | C
+217 602 Andaraí - saens Peña | C
+220 220 Praça Mauá - Usina (via Haddock Lobo) |
+220 603 Usina - Praça saens Peña (via são Miguel) |
+220 604 Usina - Praça Saens Peña (via Conde de Bonfim) |
+222 222 Vila Isabel - Praça Mauá (via Hospital dos servidores) |
+222 605 são Francisco Xavier - Vila Isabel |
+226 226 Grajaú - Carioca | C
+226 608 Grajaú - Praça saens Peña |
+229 229 Usina - Castelo | C
+401 204 Estácio - Rio Comprido (via santa Alexandrina) | C
+401 401 Rio Comprido - são salvador |
+406 133 Rodoviária Novo Rio - Largo do Machado (via Estácio) |
+407 507 Largo do Machado - silvestre |
+409 409 saens Peña - Jardim Botanico (Horto) |
+409 416 saens Peña - Jardim Botanico (Horto) (via Túnel Rebouças) |
+410 410 Praça saens Peña - Gávea |
+413 413 Muda - Jardim de Alah (via Aterro do Flamengo) |
+413 626 Praça saens Peña - Muda |
+415 415 Usina - Leblon | C
+422 422 Grajaú - Cosme Velho |
+426 426 Usina - Jardim de Alah (via Túnel santa Bárbara) |
+432 432 Vila Isabel - Leblon (via Túnel santa Bárbara) |
+433 433 Vila Isabel - Leblon (via Copacabana) |
+434 434 Grajaú - Leblon |
+434 436 Grajaú - Leblon (via Túnel Rebouças) |
+435 435 Grajaú - Gávea (via Túnel santa Bárbara) |
+438 438 Vila Isabel - Leblon (via Jóquei) |
+438 439 Vila Isabel - Leblon (via Túnel Rebouças/Jóquei) |
+460 460 são Cristóvão - Leblon (via Túnel Rebouças) | C
+461 461 são Cristóvão - Ipanema (via Túnel Rebouças) | C
+462 462 são Cristóvão - Copacabana (via Túnel Rebouças) | C
+463 440 Caju - Copacabana (via Túnel Rebouças/Túnel Velho) | C
+463 463 são Cristóvão - Copacabana (via Túnel Rebouças/Túnel Velho) | C
+464 464 Maracanã - Leblon |
+472 472 Triagem - Leme (via Praça XV) |
+473 441 Caju - Lido (via são Cristóvão) | C
+473 473 são Januário - Lido (via Túnel Rebouças) |
+474 474 Jacaré - Jardim de Alah |
+476 476 Méier - Leblon (via Túnel Rebouças) | C
+503 503 Botafogo - Alto Leblon (via Copacabana) | C
+511 511 Urca - Leblon (via Jóquei) | C
+511 513 Botafogo - Urca 512 512 Urca - Leblon (via Copacabana) | C
+521 521 são Conrado - Botafogo (via Copacabana) | C
+522 522 são Conrado - Botafogo (via Jóquei) | C
+523 523 Alvorada - Leme (via Copacabana) | C
+524 524 Botafogo - Barra da Tijuca (via Humaitá) | C
+546 546 são Conrado - Leblon (via Estrada da Gávea) | C
+569 569 Largo do Machado - Leblon (via Jóquei) | C
+570 570 Largo do Machado - Leblon (via Copacabana) | C
+571 161 Lapa - Leblon (via Jóquei) | C
+572 162 Lapa - Leblon (via Copacabana) | C
+573 573 Glória - Leblon (via Jóquei) | C
+574 574 Glória - Leblon (via Copacabana) | C
+583 583 Cosme Velho - Leblon (via Jóquei) | C
+584 580 Largo do Machado - Cosme Velho |
+584 584 Cosme Velho - Leblon (via Copacabana) | C
+591 590 Copacabana - Leme | C
+591 591 são Conrado - Leme (via Copacabana) | C
+592 592 são Conrado - Leme (via Rocinha) | C
+593 593 Leme - são Conrado (via Rocinha) | C
+2011 190 Rodoviária - Leme |
+2014 2014 Gávea - Praça Mauá |
+2015 2015 Castelo - Leblon | C
+2017 2017 Rodoviária - Leblon | C
+E08 448 Maracaí - são Conrado | C
+s011 442 Maré - Copacabana (via Praça Mauá) | C
+s012 443 Maré - Leblon (via Central) | C
+s028 444 Maré - Copacabana (via Túnel santa Bárbara) | C
+s04 445 Morro do Alemão - Copacabana (via Túnel santa Bárbara) | C
+sE003 2203 Grajaú - Castelo | C
+
+===
+
+Consórcio B - Internorte
+- 454 Méier - Prado Júnior | C
+- 458 Norte shopping - Praia de Botafogo (via Túnel santa Bárbara) | C
+- 459 Abolição - Praia de Botafogo (via Túnel santa Bárbara) | C
+- 480 Olaria - Prado Júnior | C
+- 481 Penha - Praia de Botafogo (via santa Bárbara) | C
+- sPB261 Osvaldo Cruz - Castelo
+- sP404 Caju - Leblon (via Avenida Brasil) | C
+- sV639 saens Peña - Jardim América (via shopping Via Brasil) |
+- sVB685 Irajá - Méier (via shopping Via Brasil) |
+- sVC905 Bonsucesso - Irajá (via shopping Via Brasil) |
+- sV920 Pavuna - Bonsucesso (via shopping Via Brasil) |
+- sV942 Penha - Pavuna (via shopping Via Brasil) |
+- sV956 Penha (Iapi) - Invernada (via Penha/Cidade Universitária) | C
+232 232 Praça XV - Lins (via Rua Aquidabã) |
+232 sPa232 Engenho Novo - Praça XV |
+232 sPB232 Lins - Praça XV |
+238 238 Água santa - Praça XV | C
+239 239 Água santa - Castelo (via 24 de Maio) | C
+247 247 Camarista Méier - Passeio | C
+249 249 Água santa - Carioca | C
+254 254 Praça XV - Madureira |
+261 261 Marechal Hermes - Castelo | C
+261 sPa261 Marechal Hermes - são Cristóvão | C
+277 277 Rocha Miranda - Praça XV (via são Cristóvão) | C
+292 292 Praça XV - Engenho da Rainha |
+292 402 Engenho da Rainha - Gávea |
+296 296 Castelo - Irajá |
+298 298 Castelo - Acari |
+298 sPa298 Cavalcanti - Castelo |
+298 sPB298 Conjunto dos Correios - Castelo |
+298 sPC298 Turiaçu - Castelo |
+310 310 Engenho da Rainha - Praça XV | C
+311 311 Engenheiro Leal - Praça XV (via Cavalcanti) | C
+311 356 Del Castilho - Praça XV |
+312 312 Olaria - Praça Mauá (via são Cristóvão) | C
+312 sP312 Ramos - Praça Mauá (via são Cristóvão) | C
+313 313 Penha (Grotão) - Praça da República (via Vila Cruzeiro) | C
+320 320 Praça XV - Parque União (via Aeroporto) | C
+322 322 Ribeira - Castelo (via Cocotá) | C
+322 sP322 Portuguesa - Castelo |
+322 sV322 Ribeira - Castelo (via Cidade Universitária) |
+322 327 Ribeira - Castelo (via Linha Vermelha) | C
+324 324 Ribeira - Castelo | C
+324 sVa324 Ribeira - Castelo (via AIRJ) |
+324 sVB324 Ribeira - Castelo (via Cidade Universitária) |
+324 325 Ribeira - Castelo (via Linha Vermelha) | C
+324 sP326 Portuguesa - Castelo |
+326 326 Bancários - Castelo | C
+326 sVa326 Bancários - Castelo (via AIRJ) |
+326 sVB326 Bancários - Castelo (via Cidade Universitária) |
+326 329 Bancários - Castelo (via Praia da Rosa) | C
+328 328 Bananal - Castelo | C
+328 sV328 Bananal - Castelo (via Cidade Universitária) |
+330 330 Praça XV - Parque União | C
+334 334 Cordovil - Praça Tiradentes (via Praça das Nações) | C
+335 335 Cordovil - Tiradentes | r C
+335 sr335 Cordovil - Praça Tiradentes (via Brás de Pina) | r C
+335 sV335 Brás de Pina - Praça Tiradentes | r
+342 342 Castelo - Jardim América |
+342 sPa342 Praça Catolé do Rocha - Castelo |
+342 sPB342 Vigário Geral (Praça Catolé do Rocha) - Castelo |
+342 sPC342 Vigário Geral (Rua Maba) - Castelo |
+342 sr342 Castelo - Jardim América | r
+344 344 Rocha Miranda - Praça XV | C
+345 307 Vila Kosmos - Praça da República (via Lucas) | C
+349 349 Rocha Miranda - Praça XV | C
+349 sPa349 Parque Jardim Vista Alegre - Praça XV |
+349 sPB349 Praça Honório Gurgel - Praça XV |
+349 sr349 Rocha Miranda - Praça XV | r C
+350 350 Irajá - Passeio (via Praça das Nações) | C
+350 sP350 Irajá - Passeio | r
+350 sr350 Irajá - Passeio | r
+351 351 Vaz Lobo - Passeio | C
+355 355 Praça Tiradentes - Madureira |
+355 sPa355 Vaz Lobo - Praça Tiradentes |
+355 sPB355 Vicente de Carvalho - Praça Tiradentes |
+355 sPC355 Vila Kosmos - Praça Tiradentes |
+355 sr355 Praça Tiradentes - Madureira | r
+362 362 Praça XV - Honório Gurgel |
+362 sPa362 Bairro União - Praça XV |
+362 sPB362 Coelho Neto - Praça XV |
+362 sPC362 Vila santa Tereza - Praça XV |
+362 sr362 Praça XV - Honório Gurgel | r
+372 372 Pavuna - Passeio | r
+373 373 Pavuna - Passeio | C
+374 374 Pavuna - Praça XV (via Costa Barros) | C
+375 375 Ricardo de Albuquerque - Carioca |
+376 376 Pavuna - Praça XV (via Rua Mercúrio) | C
+376 sV376 Pavuna - Praça XV (via Parque Columbia) |
+377 377 Pavuna - Praça XV (via Costa Barros) | r C
+378 378 Marechal Hermes - Castelo |
+378 sP378 Guadalupe - Castelo |
+378 sr378 Marechal Hermes - Castelo | r
+384 384 Castelo - Pavuna |
+384 sPa384 Guadalupe - Castelo |
+384 sPB384 Largo do Camboatá - Castelo |
+384 399 Castelo - Pavuna (via Avenida Presidente Vargas e Rua Alcobaça) |
+385 385 Castelo - Village Pavuna (via Camboatá) |
+385 sr385 Castelo - Village Pavuna | r
+385 sV385 Castelo - Pavuna (via Avenida Presidente Vargas) |
+386 381 Anchieta - Cidade Universitária | C
+386 386 Anchieta - Carioca (via Mariópolis) |
+386 sP386 Parque Anchieta - Carioca |
+455 455 Méier - Copacabana (via Parque do Flamengo) |
+455 sP455 Engenho Novo - Copacabana (via Parque do Flamengo) |
+456 456 Norte shopping - General Osório (via Túnel santa Bárbara) |
+457 457 Abolição - General Osório (via Túnel santa Bárbara) |
+484 403 Bonsucesso - Copacabana | C
+484 483 Penha - Copacabana | C
+484 484 Olaria - Copacabana (via Parque do Flamengo) | C
+484 sPa484 Bonsucesso - Copacabana | C
+484 sPB484 Parque Oswaldo Cruz - Copacabana | C
+485 404 Cordovil - Leblon (via Avenida Brasil) | C
+485 485 Penha - General Osório (via Túnel santa Bárbara) |
+485 486 General Osório - Fundão | C
+497 405 Ramos - Cosme Velho |
+497 497 Penha - Cosme Velho |
+498 498 Circular da Penha - Cosme Velho |
+498 sP498 Penha (Iapi) - Cosme Velho |
+498 sV498 Circular da Penha - Cosme Velho (via Conj. Marcílio Dias) |
+606 606 Rodoviária - Engenho de Dentro |
+606 sV606 Rodoviária - Engenho de Dentro (via Boca do Mato) |
+621 621 Penha - saens Peña (via Mangueira) | C
+622 622 Penha - saens Peña (via Grajaú) | C
+623 623 Penha - saens Peña (via Túnel Noel Rosa) | C
+623 sP623 Penha - Del Castilho (shopping Nova América) | C
+624 624 Mariópolis - Praça da Bandeira |
+625 625 Olaria - saens Peña | C
+627 627 saens Peña - Inhaúma |
+629 629 saens Peña - Irajá |
+630 630 Saens Peña - Penha (Iapi) (via Benfica) |
+634 634 saens Peña - Bananal |
+634 635 saens Peña - Bananal (via Linha Vermelha e Cid. Universitária) |
+634 913 Del Castilho - Fundão (via Cidade Universitária) |
+638 609 são Francisco Xavier - Méier |
+638 638 saens Peña - Marechal Hermes | C
+639 639 saens Peña - Jardim América (via Rocha Miranda) |
+650 650 Marechal Hermes - Engenho Novo | C
+653 653 Marechal Hermes - Méier | C
+661 661 Méier - Maria da Graca (via Alv. Cabral e Norte shopping) | C
+662 662 Méier - Maria da Graca (via Del Castilho) | C
+663 663 Méier - Fundão | C
+665 665 Pavuna - saens Peña (via Pastor Martin Luther King Jr.) |
+665 sVa665 Pavuna - saens Peña |
+665 sVB665 Pavuna - saens Peña (via Barros Filho/Costa Barros) |
+669 669 Pavuna - Cachambi | C
+669 sV669 Pavuna - Cachambi (via Camboatá) | C
+673 673 Lucas - Méier (via Del Castilho) | C
+676 676 Penha - Méier (via Cascadura) | C
+679 679 Grotão - Méier | C
+680 680 Penha (Iapi) - Méier | C
+685 685 Irajá - Méier |
+685 sVa685 Irajá - Méier (via Embaú) |
+687 615 Pavuna - Del Castilho (via Norte shopping) | C
+687 687 Pavuna - Méier |
+687 sP687 Pavuna - Inhaúma |
+688 688 Méier - Pavuna (via Rua José dos Reis) |
+696 616 Del Castilho - Fundão (via Cidade Universitária) |
+696 696 Méier - Praia do Dendê |
+696 sVa696 Dendê - Méier (via AIRJ) |
+696 sVB696 Méier - Praia do Dendê (via Cidade Universitária) |
+711 711 Rio Comprido - Rocha Miranda |
+725 725 Ricardo de Albuquerque - Cascadura | C
+727 727 Pavuna - Javatá |
+773 773 Pavuna - Cascadura (via Camboatá) | C
+778 778 Pavuna - Cascadura (via Estrada de Botafogo) | C
+779 779 Pavuna - Madureira (via Rua João Vicente) |
+779 sV779 Pavuna - Madureira (via Rua Marina) |
+793 793 Pavuna - Magalhães Bastos |
+795 795 Pavuna - Magalhães Bastos (via Mariópolis) |
+896 946 Pavuna - Engenho da Rainha (via Avenida Dom Hélder Câmara) |
+901 901 Bonsucesso - Bananal (via Jardim Guanabara) |
+901 sV901 Bonsucesso - Bananal (via Cacuia) |
+905 905 Bonsucesso - Irajá |
+905 sVa905 Bonsucesso - Irajá (via Amarelinho) |
+905 sVB905 Irajá - Hospital das Clínicas (via Cidade Universitária) | C
+906 906 Caju - Jardim América |
+906 sP906 Jardim América - Praça das Nações | C
+908 908 Bonsucesso - Guadalupe (via Metrô Inhaúma) |
+908 sV908 Bonsucesso - Guadalupe |
+910 910 Bananal - Madureira | C
+910 sP910 Bananal - Largo do Bicão |
+911 911 Bonsucesso - Cidade Universitária | C
+914 914 Vigário Geral - Bananal |
+915 915 Bonsucesso - AIRJ | C
+917 917 Realengo - Bonsucesso |
+917 sV917 Realengo - Bonsucesso (via Rua Marina) |
+919 919 Pavuna - Bonsucesso (Parque União) |
+920 920 Pavuna - Bonsucesso (via Fazenda Botafogo) |
+922 922 Aeroporto - Tubiacanga - Via Light | C
+924 924 Aeroporto - Bananal |
+925 925 Aeroporto - Bancários | C
+928 928 Marechal Hermes - Ramos | C
+934 934 Ribeira - Portuguesa (via Cocotá) | C
+935 935 Ribeira - Portuguesa | C
+942 942 Penha - Pavuna |
+944 944 Pavuna - Conjunto Engenheiro Rubens Paiva | C
+945 945 Pavuna - Cidade Universitária |
+945 947 Pavuna - Coelho Neto (via Deodoro) | C
+949 sV944 Pavuna - Conjunto Engenheiro Rubens Paiva (via Rua sargento A. Ernesto) | C
+956 956 Penha - Invernada (via Penha) | C
+1051 2251 Castelo - Engenho de Dentro |
+1095 2295 Castelo - Pavuna |
+1142 2342 Castelo - Bananal (via Linha Vermelha) |
+1143 2343 Castelo - Ribeira (via Linha Vermelha) |
+1144 2344 Castelo - Bancários |
+2145 2101 Aeroporto Internacional - Aeroporto santos Dumont |
+2145 2145 Aeroporto Internacional - Aeroporto santos Dumont |
+M92 321 Bancários - Castelo (via Linha Vermelha) | C
+M93 323 Bananal - Castelo (via Cacuia) | C
+s032 950 Vicente de Carvalho - Vista Alegre (via Av. Meriti/shopping Via Brasil) | C
+s033 951 Vicente de Carvalho - Vista Alegre (via Est. Padre Roser/shopping Via Brasil) | C
+sE002 2302 Mariópolis - Castelo |
+sE005 2305 Jardim América - Castelo |
+
+===
+
+Consórcio C - Transcarioca
+- 501 Barra da Tijuca - Gávea (via Av. das Américas) | C
+- 502 Recreio dos Bandeirantes - Gávea (via Av. das Américas) | C
+- 504 Piabas - Gávea (via Av. Benvindo de Novaes) |
+- 505 Recreio dos Band. - Gávea |
+- 556 Rio das Pedras - Leblon | C
+- sV2345 Castelo - Vila Valqueire (via Norte shopping) |
+- sE614 Del Castilho - Alvorada (via Engenhão) |
+267 612 Del Castilho - Gardenia Azul (via Linha Amarela) |
+175 308 Central - Barra da Tijuca (via Copacabana/Av. das Américas) |
+175 314 Central - Recreio dos Band. (via Copacabana/Av. das Américas) |
+175 315 Central - Recreio dos Bandeirantes (via Linha Amarela) |
+179 309 Central - Alvorada (via Botafogo/Av. sernambetiba) |
+179 316 Central - Recreio (via Botafogo/Av. sernambetiba) |
+179 317 Central - Alvorada (via Túnel santa Bárbara) | C
+179 955 Maré - Alvorada (via Linha Amarela) |
+225 345 Praça Mauá - Barra da Tijuca (via Furnas) |
+233 302 Rodoviária - Recreio dos Bandeirantes (via Av. sernambetiba) |
+233 303 Rodoviária - Barra da Tijuca (via Linha Amarela) | C
+233 333 Rodoviária - Barra da Tijuca (via Av. sernambetiba) |
+233 2330 Rodoviária - Barra da Tijuca (via Linha Amarela) | C
+234 301 Rodoviária - Barra da Tijuca (via Avenida das Américas) |
+234 304 Rodoviária - Recreio dos Bandeirantes (via Av. das Américas) |
+234 305 Rodoviária - Barra da Tijuca (via Túnel Rebouças) |
+240 337 Praça XV - Curicica (via Linha Amarela) |
+240 340 Praça XV - Curicica (via Cidade de Deus/Avenida Menezes Cortes) |
+240 611 Del Castilho - Curicica (via Linha Amarela) |
+241 338 Praça Mauá - Taquara (via Linha Amarela) |
+241 341 Praça Mauá - Taquara |
+241 sP341 Freguesia - Praça Mauá |
+260 363 Praça XV - Vila Valqueire |
+260 sV363 Praça XV - Vila Valqueire (via Dias da Cruz) |
+266 339 Rodoviária - Cidade de Deus (via Linha Amarela) |
+266 353 Rodoviária - Cidade de Deus |
+267 343 Praça XV - Joatinga (via Linha Amarela) |
+267 346 Praça XV - Gardênia Azul |
+268 347 Castelo - Largo dos Piabas |
+268 348 Castelo - Rio Centro (via Linha Amarela) |
+268 352 Castelo - Rio Centro (via Autódromo e Linha Amarela) |
+268 368 Castelo - Rio Centro |
+268 613 Del Castilho - Rio Centro (via Autódromo e Linha Amarela) |
+269 380 Praça XV - Curicica (via Linha Amarela/Estrada do Pau Ferro) |
+269 390 Praça XV - Curicica (via Guerengue) |
+269 sV390 Praça XV - Curicica (via Estrada do Pau Ferro) |
+269 800 Curicica - Freguesia | C
+284 371 Praça da República - Praça seca |
+382 382 Carioca - Piabas (via Av. Benvindo de Novaes) |
+557 557 Rio das Pedras - Copacabana | C
+600 600 Praça saens Peña - Taquara (via Cid. de Deus e Av. Menezes Cortes) |
+600 815 Taquara - Hospital Cardoso Fontes (via Cidade de Deus) | C
+601 601 Praça saens Peña - Taquara (via Av. Menezes Cortes) |
+601 816 Taquara - Hospital Cardoso Fontes (via Tanque) | C
+607 607 Cascadura - Rio Comprido (via Estácio) | C
+636 636 Praça saens Peña - Gardênia Azul |
+636 829 Gardênia Azul - Freguesia | C
+651 651 Méier - Cascadura (via Arquias Cordeiro) | C
+652 652 Méier - Cascadura (via Lins) | C
+667 667 Madureira - Méier | C
+678 678 Méier - Vila Valqueire |
+686 686 Fazenda da Bica - Madureira | C
+690 690 Méier - Alvorada (via Av. D. Hélder Câmara) |
+690 692 Méier - Alvorada (via Av. D. Hélder Câmara/Linha Amarela) |
+691 691 Méier - Alvorada (via Taquara/Linha Amarela) |
+691 693 Méier - Alvorada (via R. Dias da Cruz/Linha Amarela) |
+701 700 Madureira - Ponte de Marapendi | C
+701 701 Madureira - Alvorada |
+702 817 Vargem Grande - Recreio (via Av. Gláucio Gil/Rio Morto) | C
+702 880 Rio das Pedras - Recreio (via Ayrton senna) |
+703 818 Joatinga - Recreio dos Band. (via Av. das Américas) | C
+703 823 Recreio - Vargem Grande (via Rio Morto) | C
+704 844 Barra shopping - Barrinha | C
+705 805 Alvorada - Jardim Oceânico | C
+706 806 Boiuna - Barra da Tijuca (via Autódromo) | C
+706 831 Colônia - Joatinga (via Barra sul) |
+706 sE831 Rio Centro - Alvorada | C
+707 826 Joatinga - Vargem Grande | C
+707 827 Vargem Grande - Recreio (via Av. Benvindo de Novaes/Av. Gláucio Gil) | C
+708 808 Colônia - Joatinga (via Barra sul) |
+708 832 Colônia - Joatinga (via Autódromo) |
+708 sE832 Rio Centro - Alvorada | C
+710 809 Recreio - Rio das Pedras (via Praia) |
+712 709 Cascadura - Amarelinho | C
+712 712 Cascadura - Irajá | C
+721 721 Cascadura - Vila Cruzeiro |
+723 723 Cascadura - Mariópolis |
+729 859 Covanca - Largo do Tanque | C
+732 732 Gardênia Azul - Cascadura | C
+733 733 Cascadura - Barra (via Cidade de Deus) | C
+734 734 Rio das Pedras - Madureira | C
+734 860 Rio das Pedras - Freguesia | C
+736 736 Cascadura - Riocentro | C
+737 861 Rio das Pedras - Curicica (via Cidade de Deus) |
+740 856 Curicica - Taquara | C
+747 747 Vargem Grande - Madureira | C
+748 748 Cascadura - Barra da Tijuca (via Estr. de Jacarepaguá) | C
+748 sV748 Cascadura - Barra da Tijuca (via Canal) | C
+749 749 Cascadura - Recreio (via Vargem Grande) |
+750 354 Cidade de Deus - Praça XV |
+750 550 Cidade de Deus - Gávea |
+750 555 Rio das Pedras - Gávea |
+751 862 Rio das Pedras - Barra da Tijuca (via Estr. de Jacarepaguá) | C
+752 863 Rio das Pedras - Barra da Tijuca (via Av. Ayrton senna) | C
+753 753 Cascadura - Recreio (via Av. Ayrton senna) | C
+753 765 Cascadura - Barra da Tijuca (via Av. Ayrton senna) | C
+754 888 sulacap - Barra da Tijuca (via Av. Ayrton senna) |
+754 889 sulacap - Alvorada (via Novo Leblon) | C
+755 465 Cascadura - Gávea (via Av. Ayrton senna) |
+755 sP465 Cascadura - Barra da Tijuca |
+755 875 Praça seca - Chacara | C
+757 757 Cascadura - Riocentro (Camorim) |
+758 758 Cascadura - Recreio (via Av. salvador Allende) | C
+758 sV758 Cascadura - Recreio (via Av. Benvindo de Novaes) | C
+760 760 Curicica - Madureira (via Guerengue) | C
+761 761 Madureira - Boiuna |
+762 762 Madureira - Colônia |
+763 763 Madureira - santa Maria |
+764 764 Madureira - Pau da Fome |
+764 865 Pau da Fome - Taquara | C
+766 766 Madureira - Freguesia |
+774 774 Madureira - Jardim América | C
+775 775 Vigário Geral - Madureira | C
+780 780 Benfica - Madureira |
+780 785 Oswaldo Cruz - Benfica |
+781 781 Cascadura - Marechal Hermes (via Praça seca) | C
+782 782 Cascadura - Marechal Hermes (via Rocha Miranda) | C
+782 783 Marechal Hermes - Praça seca | C
+940 940 Ramos (Praia) - Madureira |
+952 952 Praça seca - Penha | C
+1045 2345 Castelo - Vila Valqueire (via Norte shopping/R. Quiririm) |
+1094 2346 Castelo - Vila Valqueire (via Marechal Hermes) |
+1133 2329 Recreio - Castelo (via Av. sernambetiba) |
+1133 2333 Recreio - Castelo (via Av. das Américas) |
+2016 318 Barra sul - Castelo |
+2018 2018 Aeroporto Internacional do RJ - Alvorada |
+2018 2918 Aeroporto Internacional R.J. - Alvorada (via Linha Amarela) |
+2111 306 Castelo - Praça seca (via Avenida Menezes Cortes) |
+2111 331 Castelo - Praça seca (via Linha Amarela) |
+2111 610 Del Castilho - Praça seca (via Linha Amarela) |
+2111 2110 Castelo - Gardênia Azul |
+2111 2111 Castelo - Praça seca (via Avenida Menezes Cortes) |
+2111 2112 Castelo - Taquara (via Linha Amarela) |
+2111 2114 Castelo - Freguesia |
+2113 332 Castelo - Taquara (via Barra da Tijuca) |
+2113 336 Pechincha - Castelo (via Itanhangá) |
+DelCastilho/Alvorada 614 Del Castilho - Alvorada (metrô) |
+s020 360 Carioca - Recreio dos Bandeirantes |
+s020 361 Carioca - Recreio dos Bandeirantes (via Linha Amarela) |
+s035 957 Maré - Alvorada (via Botafogo/Av. sernambetiba) |
+s06 958 Praça seca - Cidade Universitária (via Linha Amarela) |
+s750 886 Freguesia - Barra da Tijuca | C
+s751 887 Pechincha - Barra da Tijuca | C
+Gal.Osório/Alvorada 525 General Osório - Alvorada (metrô) |
+
+===
+
+Consórcio D - Santa Cruz
+- 897 Pingo D’Água - Alvorada (via Pedra de Guaratiba) |
+- sn300 sulacap - Carioca |
+- sV367 Realengo - Praça XV (via Avenida Brasil) | P
+- sV379 Catiri - Tiradentes (via Av. Brasil) |
+- sV389 Vila Aliança - Carioca (via senador Camará) | P
+- sn392 Bangu - Carioca (via Padre Miguel) |
+- sn393 Bangu - Castelo |
+- sr393 Bangu - Castelo (seletiva) |
+- sV394 Vila Kennedy - Tiradentes | P
+- sV395 Coqueiros - Tiradentes | P
+- sn397 Campo Grande - Carioca (via Bangu) |
+- sr397 Campo Grande - Carioca (via Bangu - seletiva) |
+- sn398 Campo Grande - Tiradentes |
+- sr398 Campo Grande - Tiradentes | E
+- sn689 Campo Grande - Méier |
+- sn737 santíssimo - Marechal Hermes | C
+- sn741 Barata - Bangu (via Murundu) | C
+- sn744 Realengo - Cascadura (via Jardim Novo) |
+- sn745 Bangu - Cascadura |
+- sn777 Padre Miguel - Madureira |
+- sn786 Campo Grande - Marechal Hermes |
+- sn803 senador Camará - Alvorada |
+- sn838 Jardim Maravilha - Campo Grande |
+- sn839 Cesarão - Campo Grande (via Urucânia) | C
+- sn840 são Fernando - Campo Grande (via Av. João XXIII) |
+- sn841 Inhoaíba - Campo Grande (via Estrada Rio - são Paulo) |
+- sn846 Rio da Prata - Campo Grande (via Cabuçu) |
+- sn850 Mendanha - Campo Grande |
+- sn854 Campo Grande - Barra da Tijuca |
+- sn867 Barra de Guaratiba - Campo Grande (via Ilha de Guaratiba) |
+- sn870 sepetiba - Bangu |
+- sn882 santa Cruz - Barra da Tijuca (via Avenida Dom João VI) |
+- sn898 sepetiba - Campo Grande (via Estrada do Campinho) |
+300 300 sulacap - Carioca |
+300 sr300 sulacap - Carioca |
+300 sV300 sulacap - Carioca (via Estrada do Fontinha) |
+367 367 Realengo - Praça XV (via Avenida Brasil - Expresso) |
+368 752 Conjunto dos Palmares - Coelho Neto |
+370 370 Padre Miguel - Praça XV (via Av. Brasil) |
+379 379 Catiri - Tiradentes (seletiva) |
+380 754 são Fernando - Coelho Neto (via santa Cruz) |
+381 2381 Pedra de Guaratiba - Castelo |
+381 sV2381 Pedra de Guaratiba - Castelo (via Mato Alto) |
+383 383 Realengo - Tiradentes (via sulacap) |
+383 sP383 Jardim Novo (Realengo) - Tiradentes |
+387 387 Marambaia - Carioca (via Barra da Tijuca) |
+388 388 santa Cruz - Carioca (via Av. Brasil) | E
+388 759 Cesarão - Coelho Neto |
+389 389 Vila Aliança - Carioca (via senador Camará) | E
+390 750 sepetiba - Coelho Neto |
+390 2304 sepetiba - Carioca (via Padre G. Decaminada) |
+391 391 Padre Miguel - Carioca |
+391 740 Padre Miguel - Cascadura |
+392 392 Bangu - Carioca (via Padre Miguel) |
+393 393 Bangu - Castelo |
+394 364 Jardim Bangu - Tiradentes | E
+394 394 Vila Kennedy - Tiradentes | E
+395 395 Coqueiros - Tiradentes | E
+396 396 Bairro Jabour - Carioca (via Av.Brasil) |
+397 397 Campo Grande - Carioca (via Bangu) |
+398 398 Campo Grande - Tiradentes |
+684 684 Padre Miguel - Méier |
+689 689 Campo Grande - Méier |
+739 739 sulacap - Bangu |
+741 741 Barata - Bangu (via Murundu) | C
+742 742 Barata - Cascadura |
+743 743 Barata - Bangu (via Água Branca) | C
+744 744 Realengo - Cascadura (via Jardim Novo) |
+744 751 Jardim Novo Realengo - Cascadura |
+745 745 Bangu - Cascadura |
+745 sV745 Bangu - Cascadura (via Tibagi) |
+746 730 Bangu - Cascadura (via shopping Bangu) | C
+746 746 Jabour - Cascadura | C
+746 sP746 senador Camará - Cascadura | C
+756 803 senador Camará - Alvorada |
+777 777 Padre Miguel - Madureira |
+777 sV777 Padre Miguel - Madureira (via Rua do Governo) |
+784 784 Vila Kennedy - Marechal Hermes |
+786 786 Campo Grande - Marechal Hermes |
+790 790 Campo Grande - Cascadura |
+790 sV790 Campo Grande - Cascadura (via Vila Aliança) |
+794 794 Bangu - Cascadura (via Barata) |
+794 801 Bangu - Taquara |
+798 798 Jardim Água Branca - Bangu (via Batan) |
+800 737 santíssimo - Marechal Hermes | C
+804 804 Largo do Aarão - Campo Grande (via Felipe Cardoso) |
+811 811 Vila Kennedy - Bangu | C
+812 812 Carobinha - Bangu |
+814 814 Rio da Prata - Bangu | C
+816 767 Campo Grande - Guadalupe (via Vila Kennedy) | C
+817 937 Campo Grande - Fazenda Botafogo (via Bangu) |
+819 819 Jardim Bangu - Bangu | C
+819 sV819 Jardim Bangu - Bangu (via Catiri) | C
+820 731 Campo Grande - Marechal Hermes (via Estrada da Posse) |
+820 820 Campo Grande - Taquaral | C
+821 821 Corcundinha - Campo Grande (via Capoeiras) | C
+822 822 Corcundinha - Campo Grande (via Vila Nova) | C
+824 824 santa Maria (Vila Nova) - Campo Grande | C
+825 807 Jesuítas - santa Cruz | C
+825 825 Jesuítas - Campo Grande (via santa Cruz) |
+828 828 A. Vasconcelos - são Jorge (via Campo Grande) |
+830 830 Pedregoso - Campo Grande | C
+833 833 Conjunto Manguariba - Campo Grande |
+834 834 Largo do Correia - Campo Grande (via Estrada Monteiro) |
+834 845 Cantagalo - Campo Grande | C
+835 835 Largo do Correia - Campo Grande (via Cachamorra) |
+836 836 Caboclos - Campo Grande | C
+837 837 Conjunto da Marinha - Campo Grande |
+838 838 Jardim Maravilha - Campo Grande |
+839 839 Cesarão - Campo Grande (via Urucânia) | C
+840 840 são Fernando - Campo Grande (via Av. João XXIII) |
+840 849 Base Aérea de santa Cruz - Campo Grande |
+840 868 Urucânia - Campo Grande |
+841 841 Inhoaíba - Campo Grande (via Estrada Rio - são Paulo) |
+841 sV841 Carvalho Ramos - Campo Grande | C
+842 842 Paciência - Campo Grande (via santa Margarida) |
+842 869 santa Margarida - Campo Grande | C
+842 893 Jardim Palmares - Campo Grande (via 29 de Março) |
+843 843 Boa Esperança - Campo Grande | C
+843 sV843 Boa Esperança - Campo Grande (via Estrada da Cachamorra) |
+846 846 Rio da Prata - Campo Grande (via Cabuçu) |
+847 847 Rio da Prata - Campo Grande (via Lameirão) |
+848 848 Bairro Monte santo - Campo Grande | C
+848 894 santa Rita - Campo Grande | C
+850 850 Mendanha - Campo Grande |
+850 sP850 são Geraldo - Campo Grande |
+850 895 serrinha - Campo Grande | C
+851 851 Campo Grande - Escola Amazonas (via Augusto Vasconcelos) | C
+852 852 Campo Grande - Pedra de Guaratiba (via Mato Alto) | C
+853 853 Vila Kennedy - Barra da Tijuca |
+853 sV853 Vila Kennedy - Barra da Tijuca (via são Geraldo) |
+853 876 Vila Kennedy - Alvorada |
+854 854 Campo Grande - Barra da Tijuca |
+854 sV854 Campo Grande - Barra da Tijuca (via Avenida das Américas) |
+854 877 Campo Grande - Alvorada |
+855 855 Bangu - Barra da Tijuca (via Jardim Maravilha) |
+855 879 Campo Grande - Alvorada (via Estrada do Magarça) |
+855 883 Bangu - Barra da Tijuca (via Estrada do Pre) |
+857 857 Jardim 7 de Abril - Campo Grande |
+858 858 são Fernando - Campo Grande (via Paciência) | C
+858 sV858 Campo Grande - santa Cruz (via Cesarão/Conjunto Alvorada) |
+864 864 Bangu - Campo Grande |
+866 866 Pedra de Guaratiba - Campo Grande (via Magarça) |
+866 sV866 Cinco Marias - Campo Grande | C
+866 884 sepetiba - Campo Grande |
+867 867 Barra de Guaratiba - Campo Grande (via Ilha de Guaratiba) |
+870 870 sepetiba - Bangu |
+870 sP870 Praia do Cardo - Bangu (via Croácia) |
+870 sV870 sepetiba - Bangu (via Cesarão) |
+871 871 sepetiba - Campo Grande |
+872 872 Nova sepetiba - Campo Grande (via Areia Branca) |
+873 873 santa Cruz - Campo Grande (via 7 de Abril Gouveias) |
+881 881 Vilar Carioca - Campo Grande | C
+882 878 santa Cruz - Alvorada (via Avenida Dom João VI) |
+882 882 santa Cruz - Barra da Tijuca (via Avenida Dom João VI) |
+882 885 Piraquê - santa Cruz (via Pedra de Guaratiba) |
+882 896 Pingo D’Água - Barra da Tijuca (via Pedra de Guaratiba) |
+891 891 sepetiba - Barra da Tijuca (via Pedra de Guaratiba) |
+892 892 são Benedito - santa Cruz (via Matadouro) | C
+918 769 Bangu - Madureira |
+918 918 Bangu - Bonsucesso (via Jardim Violeta) |
+923 923 Jardim Violeta - Iapi da Penha (via Bangu) |
+926 926 senador Camará - Penha |
+1131 2307 Jardim 7 de Abril - Castelo (via Presidente Vargas) |
+1131 2331 santa Cruz - Castelo (via Praça Mauá) |
+1132 2332 Campo Grande - Castelo (via Avenida santa Cruz) |
+1134 2334 Campo Grande - Castelo (via Estrada da Ilha e Barra da Tijuca) |
+1134 sV2334 Campo Grande - Castelo (via B. da Tijuca/Cachamorra) |
+1134 2338 Campo Grande - Castelo (via Estrada do Magarça) |
+1134 2801 Campo Grande - Barra da Tijuca (via Magarça) |
+1135 2335 santa Cruz - Castelo (via Barra da Tijuca) |
+1135 2337 santa Cruz - Castelo (via sepetiba) |
+1135 2802 santa Cruz - Barra da Tijuca (via Américas) |
+1136 770 Campo Grande - Coelho Neto (via Mendanha) |
+1136 2336 Campo Grande - Castelo (via Avenida Brasil) |
+1136 sV2336 Campo Grande - Castelo (via Estrada da Posse) |
+E01 756 santa Cruz - Coelho Neto |
+E03 771 Campo Grande - Coelho Neto |
+E05 2308 Cosmos - Carioca |
+E06 2309 Urucânia - Carioca |
+E07 2310 Bangu - Carioca |
+s010 365 Mendanha - Tiradentes | E
+s013 369 Bangu - Tiradentes | E
+s014 366 Campo Grande - Tiradentes | E
+s015 2303 Cesarão - Carioca (via Palmares e P. Vargas) |
+s022 802 Bangu - Campo Grande (via Rio da Prata) |
+s027 738 Urucânia - Marechal Hermes |
+s03 813 Manguariba - santa Cruz |
+s03 898 sepetiba - Campo Grande (via Estrada do Campinho) |
+s05 933 Catiri - Cidade Universitária (via Bangu) |
+s07 936 Campo Grande - Cid. Universitária |
+s11 358 Cosmos - Praça XV | E
+s11 sV358 Cosmos - Praça XV (via Av. Brasil)
+
