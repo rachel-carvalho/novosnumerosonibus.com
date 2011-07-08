@@ -1,0 +1,14 @@
+!!!
+html
+  head
+    title #{title} | Novos números de ônibus no Rio
+    link(rel='stylesheet', href='/css/style.css')
+    script(type='text/javascript', src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js')
+    script(type='text/javascript', src='/js/scripts.js')
+    - if(codes)
+      - var code = '<script type="text/javascript">' + codes.join('\r\n') + '</script>';
+      != code
+  body
+    h1
+      a(href='/') Novos números de ônibus no Rio
+    != body

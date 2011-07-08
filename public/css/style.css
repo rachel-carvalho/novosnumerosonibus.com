@@ -1,0 +1,21 @@
+body {
+  font: 14px sans-serif;
+  margin: 0px;
+  padding: 10px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+h1, h2, h3, h4 { margin: 10px 0px; }
+
+table, td, th { border: 1px solid #000; }
+
+table { border-collapse: collapse; }
+
+td, th { padding: 10px; }
+
+div#search { margin-bottom: 10px; }
+
+.hidden { display: none; }
