@@ -14,7 +14,7 @@ h1, h2, h3, h4 { margin: 0.5em; }
 
 h1 { font-size: 1.6em; }
 
-div#search, div#result { padding: 0 1em; margin-bottom: 1.2em; }
+div#search, div#result { padding: 0 0.7em; margin-bottom: 1.2em; }
 
 div#search input { width: 4em; padding: 0.1em; text-align: center; font-size: 2.8em; font-weight: bold; }
 
@@ -27,12 +27,13 @@ div#search div * { vertical-align: middle; }
 
 button { font-size: 1em; }
 
-div#result label { font-weight: bold; margin-right: 0.5em; }
-#result .numbers label { margin: 0 0.4em; }
+#result .numbers label { margin: 0 0em; }
 #result .numbers * { vertical-align: middle; }
 #result .prev-num, #result .curr-num { font-size: 2.8em; font-weight: bold; }
-#result .it { font-size: 1.4em; margin-bottom: 0.3em; }
+#result .it { font-size: 1.4em; margin: 0.3em 0; padding-left: 1.2em; }
+#result .extras, #result .area { padding-left: 1.7em; }
 #result .item { padding: 1em 0; border-top: 1px solid #ccc; }
+#result .prev-num { border-left: 0.4em solid #eee; padding-left: 0.2em; }
 
 .ad { position: static; bottom: 0; }
 
@@ -40,3 +41,11 @@ div#result label { font-weight: bold; margin-right: 0.5em; }
 #footer span { margin-right: 0.5em; }
 
 #empty { padding 1em; }
+
+#result .item.area-a .prev-num { border-left-color: #fcc91a; }
+#result .item.area-b .prev-num { border-left-color: #9cd52e; }
+#result .item.area-c .prev-num { border-left-color: #638da3; }
+#result .item.area-d .prev-num { border-left-color: #e8273b; }
+
+
+

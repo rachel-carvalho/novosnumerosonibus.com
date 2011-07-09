@@ -70,6 +70,7 @@ function render_lines(items, container, template_row, num, prev){
     row.find('.prev-num').html(item.previous_number);
     row.find('.curr-num').html(item.current_number);
     row.find('.it').html(item.itinerary);
+    row.addClass(area_classes[item.area]);
     var extras = row.find('.extras');
     if(item.extras.length > 0) extras.html(item.extras.join(', '));
     else extras.parent().remove();

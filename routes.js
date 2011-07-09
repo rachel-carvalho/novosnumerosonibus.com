@@ -16,9 +16,15 @@ module.exports = function(app, model, sys){
 
   app.get('/', function(req, res){
     var items = model.bus_lines.find_all();
+    var area_classes = {};
+    area_classes['Intersul (A)'] = 'area-a'
+    area_classes['Internorte (B)'] = 'area-b'
+    area_classes['Transcarioca (C)'] = 'area-c'
+    area_classes['Santa Cruz (D)'] = 'area-d'
     res.render('index', {
       items: items,
-      codes: ['var items = ' + JSON.stringify(items) + ';']
+      area_classes: area_classes,
+      codes: ['var items = ' + JSON.stringify(items) + '; var area_classes = ' + JSON.stringify(area_classes) + ';']
     });
   });
   
