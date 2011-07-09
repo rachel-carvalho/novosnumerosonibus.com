@@ -1,14 +1,14 @@
 body {
-  font: 14px sans-serif;
+  font: 1em sans-serif;
   margin: 0px;
-  padding: 10px;
+  padding: 0px;
 }
 
 a {
   color: #00B7FF;
 }
 
-h1, h2, h3, h4 { margin: 10px 0px; }
+h1, h2, h3, h4 { margin: 10px 0px 20px 0px; }
 
 table, td, th { border: 1px solid #000; }
 
@@ -20,6 +20,13 @@ div#search { margin-bottom: 10px; }
 
 .hidden { display: none; }
 
-div#search input { width: 50px; }
+h1 { font-size: 1.1em; }
 
-div#search span { margin: 10px; }
+
+div#search input { width: 3em; padding: 0.1em; text-align: center; font-size: 2.8em; font-weight: bold; }
+
+div#search span { margin-right: 10px; }
+
+div#search div * { vertical-align: middle; }
+
+button { font-size: 1em; }

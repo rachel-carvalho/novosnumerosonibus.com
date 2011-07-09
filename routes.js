@@ -17,10 +17,14 @@ module.exports = function(app, model, sys){
   app.get('/', function(req, res){
     var items = model.bus_lines.find_all();
     res.render('index', {
-      title: 'home',
       items: items,
-      codes: ['var items = ' + sys.inspect(items) + ';']
+      codes: ['var items = ' + JSON.stringify(items) + ';']
     });
+  });
+  
+  app.get('/heya', function(req, res){
+    res.header('Content-Type', 'text/plain');
+    res.send('howdy ho');
   });
   
   app.get('/import', function(req, res){
@@ -35,7 +39,7 @@ module.exports = function(app, model, sys){
     for(var i = 0; i < lines.length; i++){
       var line = lines[i];
       
-      if(!line) continue;
+      if(!line || line.trim().startsWith('==')) continue;
       
       if(line.toLowerCase().startsWith('cons')){
         area = line;
@@ -76,8 +80,9 @@ module.exports = function(app, model, sys){
       }      
     }
     
+    res.charset = 'utf-8';
     res.header('Content-Type', 'text/plain');
-    res.send(sys.inspect(items));
+    res.send(JSON.stringify(items));
   });
 
 };

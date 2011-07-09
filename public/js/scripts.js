@@ -25,14 +25,16 @@ $(document).ready(function(){
     if(!num) {
       num = curr_inpt.val().toLowerCase();
       prev = false;
+      location.href = '#';
     }
     else
       location.href = '#' + num;
     
     var search_result = [];
 
-    if(!num)
+    if(!num){
       search_result = items;
+    }
     else{
       for(var i = 0; i < items.length; i++){
         var item_num = prev ? items[i].previous_number : items[i].current_number;
@@ -49,7 +51,7 @@ $(document).ready(function(){
     btn.click();
   }
   else {
-    render_lines(items, table, template_row);
+    //render_lines(items, table, template_row);
   }
 });
 

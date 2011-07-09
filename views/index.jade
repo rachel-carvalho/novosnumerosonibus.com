@@ -1,21 +1,25 @@
 div#search
-  label
-    | nº antigo:
-    input#prev
-  span ou
-  label
-    | nº novo:
-    input#curr
+  div
+    label
+      | nº antigo:
+      input#prev(type='number', value='175')
+  div
+    span ou
+    label
+      | nº novo:
+      input#curr(type='number')
   button buscar
+
+img(src='/img/ad.png')
 
 table.hidden
   thead
     tr
-      th Número antigo
-      th Número novo
-      th Itinerário
-      th Circular/Rápido/Expresso/Parador
-      th Área
+      th nº antigo
+      th nº novo
+      th itinerário
+      th obs.
+      th área
   tbody
     tr
       td.prev-num
