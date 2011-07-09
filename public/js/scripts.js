@@ -7,27 +7,32 @@ $(document).ready(function(){
   var container = $('div#result');
   var template_row = container.find('div:first').detach();
   
-  var search = function (){
-    var num = prev_inpt.val().toLowerCase();
-    var prev = true;
-    if(!num) {
-      num = curr_inpt.val().toLowerCase();
-      prev = false;
-      location.href = '#';
-    }
-    else
-      location.href = '#' + num;
-    
+  var search = function (all_items){
     var search_result = [];
+    
+    if(all_items){
+      search_result = items;
+    }
+    else{
+      var num = prev_inpt.val().toLowerCase();
+      var prev = true;
+      if(!num) {
+        num = curr_inpt.val().toLowerCase();
+        prev = false;
+        location.href = '#';
+      }
+      else
+        location.href = '#' + num;
 
-    if(num){
-      for(var i = 0; i < items.length; i++){
-        var item_num = prev ? items[i].previous_number : items[i].current_number;
-        if(item_num.toLowerCase() == num)
-          search_result.push(items[i]);
+      if(num){
+        for(var i = 0; i < items.length; i++){
+          var item_num = prev ? items[i].previous_number : items[i].current_number;
+          if(item_num.toLowerCase() == num)
+            search_result.push(items[i]);
+        }
       }
     }
-      
+    
     render_lines(search_result, container, template_row, num, prev);
   };
   
@@ -52,15 +57,26 @@ $(document).ready(function(){
     search();
   });
   
+  $('#list-all').click(function(){
+    inpts.val('');
+    search(true);
+  });
+  
+  
   if(location.hash && location.hash.length > 1) {
-    prev_inpt.val(location.hash.substring(1));
-    search();
+    var hash = location.hash.substring(1);
+    if(hash == 'todas')
+      search(true);
+    else{
+      prev_inpt.val(hash);
+      search();
+    }
   }
 });
 
 function render_lines(items, container, template_row, num, prev){
   container.empty();
-  var empty = $('#empty');
+  var summary = $('#summary');
   
   for(var i = 0; i < items.length; i++){
     var item = items[i];
@@ -80,15 +96,16 @@ function render_lines(items, container, template_row, num, prev){
   
   if (items.length > 0){
     container.removeClass('hidden');
-    empty.addClass('hidden');
+    var plural = items.length > 1 ? 's' : '';
+    summary.html('<strong>' + items.length.toString() + '</strong> linha' + plural + ' encontrada' + plural + ':').removeClass('hidden');
   }
   else{
     container.addClass('hidden');
     if(num){
       var prevText = prev ? 'antigo' : 'novo';
-      empty.html('O número ' + prevText + ' <strong>' + num + '</strong> não existe.').removeClass('hidden');
+      summary.html('O número ' + prevText + ' <strong>' + num + '</strong> não existe.').removeClass('hidden');
     }
     else
-      empty.addClass('hidden'); 
+      summary.addClass('hidden'); 
   }
 }

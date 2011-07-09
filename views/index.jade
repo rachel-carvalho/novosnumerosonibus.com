@@ -7,6 +7,8 @@ div#search
     label(for='curr') nº novo:
     input#curr(type='number')
 
+p#summary.hidden
+
 div#result.hidden
   div.item
     div.numbers
@@ -17,9 +19,9 @@ div#result.hidden
     div.extras
     div.area
 
-p#empty.hidden
-
 img.ad(src='/img/ad.png')
+
+a(href='#todas')#list-all listar todas as linhas
 
 div#footer
   span Fonte:

@@ -14,7 +14,7 @@ h1, h2, h3, h4 { margin: 0.5em; }
 
 h1 { font-size: 1.6em; }
 
-div#search, div#result { padding: 0 0.7em; margin-bottom: 1.2em; }
+div#search, div#result, #summary, #list-all { padding: 0 0.7em; margin-bottom: 1.2em; }
 
 div#search input { width: 4em; padding: 0.1em; text-align: center; font-size: 2.8em; font-weight: bold; }
 
@@ -40,12 +40,12 @@ button { font-size: 1em; }
 #footer { padding: 1em; font-size: 0.7em; }
 #footer span { margin-right: 0.5em; }
 
-#empty { padding 1em; }
+#summary { padding 1em; }
 
 #result .item.area-a .prev-num { border-left-color: #fcc91a; }
 #result .item.area-b .prev-num { border-left-color: #9cd52e; }
 #result .item.area-c .prev-num { border-left-color: #638da3; }
 #result .item.area-d .prev-num { border-left-color: #e8273b; }
 
-
+#list-all { display: block; margin: 0px; padding-top: 0.2em; }
 
