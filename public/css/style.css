@@ -32,9 +32,11 @@ div#result label { font-weight: bold; margin-right: 0.5em; }
 #result .numbers * { vertical-align: middle; }
 #result .prev-num, #result .curr-num { font-size: 2.8em; font-weight: bold; }
 #result .it { font-size: 1.4em; margin-bottom: 0.3em; }
-#result .item { margin-bottom: 1em; }
+#result .item { padding: 1em 0; border-top: 1px solid #ccc; }
 
 .ad { position: static; bottom: 0; }
 
 #footer { padding: 1em; font-size: 0.7em; }
 #footer span { margin-right: 0.5em; }
+
+#empty { padding 1em; }

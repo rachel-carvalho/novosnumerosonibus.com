@@ -3,13 +3,6 @@ $(document).ready(function(){
   var prev_inpt = $('#search input#prev');
   var curr_inpt = $('#search input#curr');
   var btn = $('#search button');
-  
-  inpts.focus(function(){
-    if(this.id == prev_inpt.attr('id'))
-      curr_inpt.val('');
-    else if(this.id == curr_inpt.attr('id'))
-      prev_inpt.val('');
-  });
 
   var container = $('div#result');
   var template_row = container.find('div:first').detach();
@@ -27,10 +20,7 @@ $(document).ready(function(){
     
     var search_result = [];
 
-    if(!num){
-      search_result = items;
-    }
-    else{
+    if(num){
       for(var i = 0; i < items.length; i++){
         var item_num = prev ? items[i].previous_number : items[i].current_number;
         if(item_num.toLowerCase() == num)
@@ -38,8 +28,16 @@ $(document).ready(function(){
       }
     }
       
-    render_lines(search_result, container, template_row);
+    render_lines(search_result, container, template_row, num, prev);
   };
+  
+  inpts.focus(function(){
+    if(this.id == prev_inpt.attr('id'))
+      curr_inpt.val('');
+    else if(this.id == curr_inpt.attr('id'))
+      prev_inpt.val('');
+    search();
+  });
     
   inpts.keydown(function(e) {
     if (e.keyCode == 13)
@@ -47,13 +45,11 @@ $(document).ready(function(){
   });
   
   inpts.keyup(function(){
-    if($(this).val())
-      search();
+    search();
   });
   
   inpts.blur(function(){
-    if($(this).val())
-      search();
+    search();
   });
   
   if(location.hash && location.hash.length > 1) {
@@ -62,8 +58,9 @@ $(document).ready(function(){
   }
 });
 
-function render_lines(items, container, template_row){
+function render_lines(items, container, template_row, num, prev){
   container.empty();
+  var empty = $('#empty');
   
   for(var i = 0; i < items.length; i++){
     var item = items[i];
@@ -80,6 +77,17 @@ function render_lines(items, container, template_row){
     container.append(row);
   }
   
-  if (items.length > 0)
+  if (items.length > 0){
     container.removeClass('hidden');
+    empty.addClass('hidden');
+  }
+  else{
+    container.addClass('hidden');
+    if(num){
+      var prevText = prev ? 'antigo' : 'novo';
+      empty.html('O número ' + prevText + ' <strong>' + num + '</strong> não existe.').removeClass('hidden');
+    }
+    else
+      empty.addClass('hidden'); 
+  }
 }
