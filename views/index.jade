@@ -1,30 +1,24 @@
 div#search
   div
-    label
-      | nº antigo:
-      input#prev(type='number', value='175')
+    label(for='prev') nº antigo:
+    input#prev(type='number')
   div
     span ou
-    label
-      | nº novo:
-      input#curr(type='number')
-  button buscar
+    label(for='curr') nº novo:
+    input#curr(type='number')
 
-img(src='/img/ad.png')
+div#result.hidden
+  div.item
+    div.numbers
+      span.prev-num
+      label ─►
+      span.curr-num
+    div.it
+    div.extras
+    div.area
 
-table.hidden
-  thead
-    tr
-      th nº antigo
-      th nº novo
-      th itinerário
-      th obs.
-      th área
-  tbody
-    tr
-      td.prev-num
-      td.curr-num
-      td.it
-      td.extras
-      td.area
+img.ad(src='/img/ad.png')
 
+div#footer
+  span Fonte:
+  a(href='http://www.fetranspor.com.br/images/stories/noticias/tabeladelinhas.pdf', target='_blank') Tabela de linhas - Fetranspor

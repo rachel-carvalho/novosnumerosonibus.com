@@ -10,16 +10,11 @@ $(document).ready(function(){
     else if(this.id == curr_inpt.attr('id'))
       prev_inpt.val('');
   });
-  
-  inpts.keydown(function(e) {
-    if (e.keyCode == 13)
-      btn.click();
-  });
 
-  var table = $('table');
-  var template_row = table.find('tbody tr:first').detach();
+  var container = $('div#result');
+  var template_row = container.find('div:first').detach();
   
-  btn.click(function(){
+  var search = function (){
     var num = prev_inpt.val().toLowerCase();
     var prev = true;
     if(!num) {
@@ -43,36 +38,48 @@ $(document).ready(function(){
       }
     }
       
-    render_lines(search_result, table, template_row);
+    render_lines(search_result, container, template_row);
+  };
+    
+  inpts.keydown(function(e) {
+    if (e.keyCode == 13)
+      search();
+  });
+  
+  inpts.keyup(function(){
+    if($(this).val())
+      search();
+  });
+  
+  inpts.blur(function(){
+    if($(this).val())
+      search();
   });
   
   if(location.hash && location.hash.length > 1) {
     prev_inpt.val(location.hash.substring(1));
-    btn.click();
-  }
-  else {
-    //render_lines(items, table, template_row);
+    search();
   }
 });
 
-function render_lines(items, table, template_row){
-  var tbody = table.find('tbody');
-  
-  tbody.empty();
+function render_lines(items, container, template_row){
+  container.empty();
   
   for(var i = 0; i < items.length; i++){
     var item = items[i];
-    var tr = template_row.clone();
+    var row = template_row.clone();
     
-    tr.find('td.area').html(item.area);
-    tr.find('td.prev-num').html(item.previous_number);
-    tr.find('td.curr-num').html(item.current_number);
-    tr.find('td.it').html(item.itinerary);
-    tr.find('td.extras').html(item.extras.join(', '));
+    row.find('.area').html(item.area);
+    row.find('.prev-num').html(item.previous_number);
+    row.find('.curr-num').html(item.current_number);
+    row.find('.it').html(item.itinerary);
+    var extras = row.find('.extras');
+    if(item.extras.length > 0) extras.html(item.extras.join(', '));
+    else extras.parent().remove();
     
-    tbody.append(tr);
+    container.append(row);
   }
   
   if (items.length > 0)
-    table.removeClass('hidden');
+    container.removeClass('hidden');
 }

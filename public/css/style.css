@@ -8,25 +8,33 @@ a {
   color: #00B7FF;
 }
 
-h1, h2, h3, h4 { margin: 10px 0px 20px 0px; }
-
-table, td, th { border: 1px solid #000; }
-
-table { border-collapse: collapse; }
-
-td, th { padding: 10px; }
-
-div#search { margin-bottom: 10px; }
+h1, h2, h3, h4 { margin: 0.5em; }
 
 .hidden { display: none; }
 
-h1 { font-size: 1.1em; }
+h1 { font-size: 1.6em; }
 
+div#search, div#result { padding: 0 1em; margin-bottom: 1.2em; }
 
-div#search input { width: 3em; padding: 0.1em; text-align: center; font-size: 2.8em; font-weight: bold; }
+div#search input { width: 4em; padding: 0.1em; text-align: center; font-size: 2.8em; font-weight: bold; }
 
-div#search span { margin-right: 10px; }
+div#search span { display: block; width: 4.8em; text-align: right; }
+div#search label { width: 5em; float: left; padding-top: 1.4em; padding-right: 1em; text-align: right; }
+div#search input { float:left; }
+div#search div { overflow: auto; }
 
 div#search div * { vertical-align: middle; }
 
 button { font-size: 1em; }
+
+div#result label { font-weight: bold; margin-right: 0.5em; }
+#result .numbers label { margin: 0 0.4em; }
+#result .numbers * { vertical-align: middle; }
+#result .prev-num, #result .curr-num { font-size: 2.8em; font-weight: bold; }
+#result .it { font-size: 1.4em; margin-bottom: 0.3em; }
+#result .item { margin-bottom: 1em; }
+
+.ad { position: static; bottom: 0; }
+
+#footer { padding: 1em; font-size: 0.7em; }
+#footer span { margin-right: 0.5em; }

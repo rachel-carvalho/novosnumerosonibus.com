@@ -1,4 +1,4 @@
-Consórcio A - Intersul
+Intersul (A)
 - 120 Central - Prado Júnior | C
 - 129 Rodoviária - Praia de Botafogo (via Túnel santa Bárbara) | C
 - 411 Usina - Prado Júnior | C
@@ -121,13 +121,13 @@ sE003 2203 Grajaú - Castelo | C
 
 ===
 
-Consórcio B - Internorte
+Internorte (B)
 - 454 Méier - Prado Júnior | C
 - 458 Norte shopping - Praia de Botafogo (via Túnel santa Bárbara) | C
 - 459 Abolição - Praia de Botafogo (via Túnel santa Bárbara) | C
 - 480 Olaria - Prado Júnior | C
 - 481 Penha - Praia de Botafogo (via santa Bárbara) | C
-- sPB261 Osvaldo Cruz - Castelo
+- sPB261 Osvaldo Cruz - Castelo |
 - sP404 Caju - Leblon (via Avenida Brasil) | C
 - sV639 saens Peña - Jardim América (via shopping Via Brasil) |
 - sVB685 Irajá - Méier (via shopping Via Brasil) |
@@ -339,7 +339,7 @@ sE005 2305 Jardim América - Castelo |
 
 ===
 
-Consórcio C - Transcarioca
+Transcarioca (C)
 - 501 Barra da Tijuca - Gávea (via Av. das Américas) | C
 - 502 Recreio dos Bandeirantes - Gávea (via Av. das Américas) | C
 - 504 Piabas - Gávea (via Av. Benvindo de Novaes) |
@@ -494,7 +494,7 @@ Gal.Osório/Alvorada 525 General Osório - Alvorada (metrô) |
 
 ===
 
-Consórcio D - Santa Cruz
+Santa Cruz (D)
 - 897 Pingo D’Água - Alvorada (via Pedra de Guaratiba) |
 - sn300 sulacap - Carioca |
 - sV367 Realengo - Praça XV (via Avenida Brasil) | P
@@ -687,5 +687,5 @@ s03 898 sepetiba - Campo Grande (via Estrada do Campinho) |
 s05 933 Catiri - Cidade Universitária (via Bangu) |
 s07 936 Campo Grande - Cid. Universitária |
 s11 358 Cosmos - Praça XV | E
-s11 sV358 Cosmos - Praça XV (via Av. Brasil)
+s11 sV358 Cosmos - Praça XV (via Av. Brasil) |
 
