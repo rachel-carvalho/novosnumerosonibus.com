@@ -20,7 +20,20 @@ div#result.hidden
     div.extras
     div.area
 
-img.ad(src='/img/ad.png')
+div.ad
+  script(type="text/javascript")
+    <!--
+    // XHTML should not attempt to parse these strings, declare them CDATA.
+    /* <![CDATA[ */
+    window.googleAfmcRequest = {
+      client: 'ca-mb-pub-6782658805468575',
+      format: '320x50_mb',
+      output: 'html',
+      slotname: '6751409080',
+    };
+    /* ]]> */
+    //-->
+  script(type="text/javascript", src="http://pagead2.googlesyndication.com/pagead/show_afmc_ads.js")
 
 a(href='#todas')#list-all listar todas as linhas
 
