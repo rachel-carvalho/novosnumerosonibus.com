@@ -10,9 +10,11 @@ html
     link(rel='apple-touch-icon', href='/img/iphone-icon.png')
     link(rel='apple-touch-icon', sizes='72x72', href='/img/ipad-icon.png')
     link(rel='apple-touch-icon', sizes='114x114', href='/img/iphone4-icon.png')
+    link(rel='stylesheet', href='/css/add2home.css')
     link(rel='stylesheet', href='/css/style.css')
     script(type='text/javascript', src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js')
     script(type='text/javascript', src='/js/scripts.js')
+    script(type='text/javascript', src='/js/add2home.js')
     - if(codes)
       - var code = '<script type="text/javascript">' + codes.join('\r\n') + '</script>';
       != code
