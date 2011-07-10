@@ -5,7 +5,7 @@ String.prototype.startsWith = function(input){
 };
 
 String.prototype.endsWith = function(input) {
-    return this.match(input + '$') == input;
+    return this.substr(-1) === input;
 };
 
 String.prototype.trim = function() {

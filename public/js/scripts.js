@@ -2,7 +2,7 @@ String.prototype.startsWith = function(input){
     return this.substring(0, input.length) === input;
 };
 
-String.prototype.endsWith = function(input) {
+String.prototype.endsWith = function(input){
     return this.substr(-1) === input;
 };
 
@@ -18,6 +18,14 @@ $(document).ready(function(){
   var curr_inpt = $('#search input#curr');
   var btn = $('#search button');
   brs_source = $('#brs-source').attr('href');
+  
+  var ua = navigator.userAgent;
+  var isMobile = ua.match(/iPad/i) != null || ua.match(/iPhone/i) != null || ua.match(/iPod/i) != null || ua.match(/Android/i) != null;
+  
+  if(!isMobile){
+    for(var i = 0; i < inpts.length; i++)
+      inpts[i].type = 'text';
+  }
 
   var container = $('div#result');
   var template_row = container.find('div:first').detach();
