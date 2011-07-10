@@ -2,7 +2,7 @@ var fs = require('fs');
 
 String.prototype.startsWith = function(input){
     return this.substring(0, input.length) === input;
-}
+};
 
 String.prototype.endsWith = function(input) {
     return this.match(input + '$') == input;
@@ -10,17 +10,18 @@ String.prototype.endsWith = function(input) {
 
 String.prototype.trim = function() {
     return this.replace(/^\s*|\s*$/g, '');
-}
+};
 
 module.exports = function(app, model, sys){
 
   app.get('/', function(req, res){
     var items = model.bus_lines.find_all();
     var area_classes = {};
-    area_classes['Intersul (A)'] = 'area-a'
-    area_classes['Internorte (B)'] = 'area-b'
-    area_classes['Transcarioca (C)'] = 'area-c'
-    area_classes['Santa Cruz (D)'] = 'area-d'
+    area_classes['Intersul (A)'] = 'area-a';
+    area_classes['Internorte (B)'] = 'area-b';
+    area_classes['Transcarioca (C)'] = 'area-c';
+    area_classes['Santa Cruz (D)'] = 'area-d';
+    sys.inspect
     res.render('index', {
       items: items,
       area_classes: area_classes,
@@ -61,19 +62,23 @@ module.exports = function(app, model, sys){
       if(parts.length == 2 && parts[1].trim()){
         var extras = parts[1].trim().split(' ');
         for(var j = 0; j < extras.length; j++){
-          switch(extras[j].toLowerCase()){
-            case 'c':
-              item.extras.push('Circular');
-              break;
-            case 'r':
-              item.extras.push('Rápido');
-              break;
-            case 'e':
-              item.extras.push('Expresso');
-              break;
-            case 'p':
-              item.extras.push('Parador');
-              break;
+          if(extras[j]){
+            switch(extras[j].toLowerCase()){
+              case 'c':
+                item.extras.push('Circular');
+                break;
+              case 'r':
+                item.extras.push('Rápido');
+                break;
+              case 'e':
+                item.extras.push('Expresso');
+                break;
+              case 'p':
+                item.extras.push('Parador');
+                break;
+              default:
+                item.extras.push(extras[j]);
+            }
           }
         }
       }
@@ -83,6 +88,7 @@ module.exports = function(app, model, sys){
       item.previous_number = parts[0];
       if(item.previous_number.length < 7)
         item.previous_number = item.previous_number.toUpperCase();
+      if(item.previous_number == '-') item.previous_number = '';
       item.current_number = parts[1];
       if(item.current_number.length < 7)
         item.current_number = item.current_number.toUpperCase();

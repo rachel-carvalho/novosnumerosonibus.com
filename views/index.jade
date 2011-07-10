@@ -13,7 +13,8 @@ div#result.hidden
   div.item
     div.numbers
       span.prev-num
-      label ─►
+      label 
+        span ─►
       span.curr-num
     div.it
     div.extras
@@ -24,5 +25,9 @@ img.ad(src='/img/ad.png')
 a(href='#todas')#list-all listar todas as linhas
 
 div#footer
-  span Fonte:
-  a(href='http://www.fetranspor.com.br/images/stories/noticias/tabeladelinhas.pdf', target='_blank') Tabela de linhas - Fetranspor
+  span Fontes:
+  ul
+    li
+      a#number-source(href='http://www.fetranspor.com.br/images/stories/noticias/tabeladelinhas.pdf', target='_blank') Tabela de linhas - Fetranspor
+    li
+      a#brs-source(href='http://www.fetranspor.com.br/brs/brs.php', target='_blank') Informações BRS - Fetranspor  

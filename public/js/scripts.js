@@ -1,8 +1,23 @@
+String.prototype.startsWith = function(input){
+    return this.substring(0, input.length) === input;
+};
+
+String.prototype.endsWith = function(input) {
+    return this.substr(-1) === input;
+};
+
+String.prototype.trim = function() {
+    return this.replace(/^\s*|\s*$/g, '');
+};
+
+var brs_source = '';
+
 $(document).ready(function(){
   var inpts = $('#search input');
   var prev_inpt = $('#search input#prev');
   var curr_inpt = $('#search input#curr');
   var btn = $('#search button');
+  brs_source = $('#brs-source').attr('href');
 
   var container = $('div#result');
   var template_row = container.find('div:first').detach();
@@ -88,7 +103,18 @@ function render_lines(items, container, template_row, num, prev){
     row.find('.it').html(item.itinerary);
     row.addClass(area_classes[item.area]);
     var extras = row.find('.extras');
-    if(item.extras.length > 0) extras.html(item.extras.join(', '));
+    if(item.extras.length > 0){
+      var treated_extras = [];
+      for(var j = 0; j < item.extras.length; j++){
+        if(item.extras[j].toLowerCase().startsWith('brs')){
+          treated_extras.push('<a href="'+ brs_source +'" target="_blank" title="Mais informações sobre BRS" class="brs">' + item.extras[j] + '</a>');
+        }
+        else {
+          treated_extras.push(item.extras[j]);
+        }
+      }
+      extras.html(treated_extras.join(', '));
+    }
     else extras.parent().remove();
     
     container.append(row);
