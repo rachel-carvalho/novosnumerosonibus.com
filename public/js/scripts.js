@@ -34,10 +34,10 @@ $(document).ready(function(){
       if(!num) {
         num = curr_inpt.val().toLowerCase();
         prev = false;
-        location.href = '#';
+        location.href = '#/novo/' + num;
       }
       else
-        location.href = '#' + num;
+        location.href = '#/antigo/' + num;
 
       if(num){
         for(var i = 0; i < items.length; i++){
@@ -83,7 +83,12 @@ $(document).ready(function(){
     if(hash == 'todas')
       search(true);
     else{
-      prev_inpt.val(hash);
+      var path_prev = '/antigo/';
+      var path_curr = '/novo/';
+      if(hash.startsWith(path_prev))
+        prev_inpt.val(hash.substring(path_prev.length));
+      else if(hash.startsWith(path_curr))
+        curr_inpt.val(hash.substring(path_curr.length));
       search();
     }
   }
