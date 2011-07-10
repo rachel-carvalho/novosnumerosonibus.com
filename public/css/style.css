@@ -36,7 +36,7 @@ button { font-size: 1em; }
 #result .item { padding: 1em 0; border-top: 1px solid #ccc; }
 #result .prev-num { border-left: 0.4em solid #eee; padding-left: 0.2em; }
 
-.ad { position: static; bottom: 0; }
+div.ad.spaced { padding: 0 0.7em; }
 
 #footer { padding: 1em; font-size: 0.7em; }
 #footer span { margin-right: 0.5em; }

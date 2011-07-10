@@ -29,7 +29,7 @@ module.exports = function(app, model, sys){
     });
   });
   
-  /*app.get('/heya', function(req, res){
+  app.get('/heya', function(req, res){
     res.header('Content-Type', 'text/plain');
     res.send('howdy ho');
   });
@@ -100,7 +100,7 @@ module.exports = function(app, model, sys){
     res.charset = 'utf-8';
     res.header('Content-Type', 'text/plain');
     res.send(JSON.stringify(items));
-  });*/
+  });
 
 };
 

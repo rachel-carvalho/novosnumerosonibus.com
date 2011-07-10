@@ -12,6 +12,32 @@ String.prototype.trim = function() {
 
 var brs_source = '';
 
+var desktop_ad = '<script type="text/javascript"><!--\r\n' +
+'google_ad_client = "ca-pub-6782658805468575";\r\n' +
+'/* novosnumerosonibus */\r\n' +
+'google_ad_slot = "0611967022";\r\n' +
+'google_ad_width = 468;\r\n' +
+'google_ad_height = 60;\r\n' +
+'//-->\r\n' +
+'</script>\r\n' +
+'<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>';
+
+var mobile_ad = '<script type="text/javascript"><!--\r\n' +
+'  // XHTML should not attempt to parse these strings, declare them CDATA.\r\n' +
+'  /* <![CDATA[ */\r\n' +
+'  window.googleAfmcRequest = {\r\n' +
+'    client: "ca-mb-pub-6782658805468575",\r\n' +
+'    format: "320x50_mb",\r\n' +
+'    output: "html",\r\n' +
+'    slotname: "6751409080",\r\n' +
+'  };\r\n' +
+'  /* ]]> */\r\n' +
+'//--></script>\r\n' +
+'<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_afmc_ads.js"></script>';
+
+var ua = navigator.userAgent;
+var isMobile = ua.match(/iPad/i) != null || ua.match(/iPhone/i) != null || ua.match(/iPod/i) != null || ua.match(/Android/i) != null;
+
 $(document).ready(function(){
   var inpts = $('#search input');
   var prev_inpt = $('#search input#prev');
@@ -19,12 +45,11 @@ $(document).ready(function(){
   var btn = $('#search button');
   brs_source = $('#brs-source').attr('href');
   
-  var ua = navigator.userAgent;
-  var isMobile = ua.match(/iPad/i) != null || ua.match(/iPhone/i) != null || ua.match(/iPod/i) != null || ua.match(/Android/i) != null;
-  
   if(!isMobile){
     for(var i = 0; i < inpts.length; i++)
       inpts[i].type = 'text';
+    
+    $('div.ad').addClass('spaced');
   }
 
   var container = $('div#result');
