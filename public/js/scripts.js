@@ -110,10 +110,9 @@ $(document).ready(function(){
     search(true);
   });
   
-  
   if(location.hash && location.hash.length > 1) {
     var hash = location.hash.substring(1);
-    if(hash == 'todas')
+    if(hash == '/todas/')
       search(true);
     else{
       var path_prev = '/antigo/';
@@ -135,8 +134,13 @@ function render_lines(items, container, template_row, num, prev){
     var item = items[i];
     var row = template_row.clone();
     
+    var prev = row.find('.prev-num');
+    
     row.find('.area').html(item.area);
-    row.find('.prev-num').html(item.previous_number);
+    prev.html(item.previous_number);
+    if(!item.previous_number)
+      prev.html('(inexistente)').addClass('inexistant');
+    
     row.find('.curr-num').html(item.current_number);
     row.find('.it').html(item.itinerary);
     row.addClass(area_classes[item.area]);

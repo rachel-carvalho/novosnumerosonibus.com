@@ -34,7 +34,8 @@ button { font-size: 1em; }
 #result .it { font-size: 1.4em; margin: 0.3em 0; padding-left: 1.2em; }
 #result .extras, #result .area { padding-left: 1.7em; }
 #result .item { padding: 1em 0; border-top: 1px solid #ccc; }
-#result .prev-num { border-left: 0.4em solid #eee; padding-left: 0.2em; }
+#result .numbers { border-left: 1.1em solid #eee; padding-left: 0.5em; }
+#result .prev-num.inexistant { font-size: 1em; }
 
 div.ad.spaced { padding: 0 0.7em; }
 
@@ -43,12 +44,13 @@ div.ad.spaced { padding: 0 0.7em; }
 
 #summary { padding 1em; }
 
-#result .item.area-a .prev-num { border-left-color: #fcc91a; }
-#result .item.area-b .prev-num { border-left-color: #9cd52e; }
-#result .item.area-c .prev-num { border-left-color: #638da3; }
-#result .item.area-d .prev-num { border-left-color: #e8273b; }
+#result .item.area-a .numbers { border-left-color: #fcc91a; }
+#result .item.area-b .numbers { border-left-color: #9cd52e; }
+#result .item.area-c .numbers { border-left-color: #638da3; }
+#result .item.area-d .numbers { border-left-color: #e8273b; }
 
 #list-all { display: block; margin: 0px; padding-top: 0.2em; }
 
 #footer ul, #footer li { padding: 0px; margin: 0px; list-style-type: none; }
 
+#footer span.info { display: block; margin-top: 1em; }
