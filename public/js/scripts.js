@@ -3,7 +3,7 @@ String.prototype.startsWith = function(input){
 };
 
 String.prototype.endsWith = function(input){
-    return this.substr(-1) === input;
+    return this.substr(-1 * input.length) === input;
 };
 
 String.prototype.trim = function() {
@@ -36,7 +36,8 @@ var mobile_ad = '<script type="text/javascript"><!--\r\n' +
 '<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_afmc_ads.js"></script>';
 
 var ua = navigator.userAgent;
-var isMobile = ua.match(/iPad/i) != null || ua.match(/iPhone/i) != null || ua.match(/iPod/i) != null || ua.match(/Android/i) != null;
+var isAndroid = ua.match(/Android/i) != null;
+var isMobile = ua.match(/iPad/i) != null || ua.match(/iPhone/i) != null || ua.match(/iPod/i) != null || isAndroid;
 var summary = null;
 
 $(document).ready(function(){
@@ -48,11 +49,12 @@ $(document).ready(function(){
   summary = $('#summary');
   var scroll = $('#scroll');
   
-  if(!isMobile){
+  if(!isMobile || isAndroid){
     for(var i = 0; i < inpts.length; i++)
       inpts[i].type = 'text';
     
-    $('div.ad').addClass('spaced');
+    if(!isAndroid)
+      $('div.ad').addClass('spaced');
   }
 
   var container = $('div#result');

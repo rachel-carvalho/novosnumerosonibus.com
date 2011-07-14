@@ -5,7 +5,7 @@ String.prototype.startsWith = function(input){
 };
 
 String.prototype.endsWith = function(input) {
-    return this.substr(-1) === input;
+    return this.substr(-1 * input.length) === input;
 };
 
 String.prototype.trim = function() {
