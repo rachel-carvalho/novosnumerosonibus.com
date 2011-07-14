@@ -78,8 +78,25 @@ $(document).ready(function(){
         location.href = '#/antigo/' + num;
 
       if(num){
+        var parts = num.match(/[a-z]+|\d+/ig);
+        
+        for(var j = 0; j < parts.length; j++)
+          if(!isNaN(parts[j])) parts[j] = Number(parts[j]).toString();
+        
+        num = parts.join('');
+
         for(var i = 0; i < items.length; i++){
           var item_num = prev ? items[i].previous_number : items[i].current_number;
+          
+          var parts = item_num.match(/[a-z]+|\d+/ig);
+          
+          if(parts){
+            for(var j = 0; j < parts.length; j++)
+              if(!isNaN(parts[j])) parts[j] = Number(parts[j]).toString();
+            
+            item_num = parts.join('');
+          }
+          
           if(item_num.toLowerCase() == num)
             search_result.push(items[i]);
         }
