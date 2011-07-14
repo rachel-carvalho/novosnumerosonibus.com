@@ -14,12 +14,12 @@ h1, h2, h3, h4 { margin: 0.5em; }
 
 h1 { font-size: 1.6em; background-color: #666; color: #fff; margin: 0; margin-bottom: 0.5em; padding: 0.5em; }
 
-div#search, div#result, #summary, #list-all { padding: 0 0.7em; margin-bottom: 1.2em; }
+div#search, div#result, #summary, #list-all { padding: 0 0.4em; margin-bottom: 1.2em; }
 
 div#search input { width: 4em; padding: 0.1em; text-align: center; font-size: 2.8em; font-weight: bold; }
 
-div#search span { display: block; width: 5.4em; text-align: right; }
-div#search label { width: 5.5em; float: left; padding-top: 1.4em; padding-right: 1em; text-align: right; }
+div#search span { display: block; width: 4.2em; text-align: right; }
+div#search label { width: 4.5em; float: left; padding-top: 1.4em; padding-right: 0.6em; text-align: right; white-space: nowrap; }
 div#search input { float:left; }
 div#search div { overflow: auto; }
 
@@ -37,9 +37,9 @@ button { font-size: 1em; }
 #result .numbers { border-left: 1.1em solid #eee; padding-left: 0.5em; }
 #result .prev-num.inexistant { font-size: 1em; }
 
-div.ad.spaced { padding: 0 0.7em; }
+div.ad.spaced { padding: 0 0.4em; }
 
-#footer { padding: 1em; font-size: 0.7em; }
+#footer { padding: 0.5em; font-size: 0.7em; }
 #footer span { margin-right: 0.5em; }
 
 #summary { padding 1em; }
@@ -54,3 +54,10 @@ div.ad.spaced { padding: 0 0.7em; }
 #footer ul, #footer li { padding: 0px; margin: 0px; list-style-type: none; }
 
 #footer span.info { display: block; margin-top: 1em; }
+
+/*input.not-found { background: url('/img/not-found.png') no-repeat right center; }
+input.found { background-color: #f1fff1; }*/
+
+#scroll { border: 0px; background: url('/img/arrow-down.png') center center no-repeat; width: 43px; height: 40px; position: absolute; padding: 0px; }
+#scroll span { display: none; }
+
