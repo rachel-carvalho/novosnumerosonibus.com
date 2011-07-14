@@ -1,9 +1,11 @@
 {
     "name": "novos-numeros-onibus-rio"
+  , "description": "Search for new bus numbers in Rio."
   , "version": "0.0.1"
+  , "author": "Rachel Carvalho <rachel.carvalho@gmail.com>"
   , "private": true
   , "dependencies": {
-      "express": "2.3.11"
-    , "jade": ">= 0.0.1"
+      "express": "2.4.3"
+    , "jade": "0.13.0"
   }
 }
