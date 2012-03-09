@@ -14,6 +14,15 @@ var sys = require('sys');
 // Configuration
 
 app.configure(function(){
+  // www redirect
+  app.use(function(req, res, next){
+    console.log(req.headers.host, req.originalUrl);
+    if((/^www\..+/).test(req.headers.host))
+      res.redirect('http://novosnumerosonibus.com' + req.originalUrl);
+    else
+      next();
+  });
+
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
   app.use(express.bodyParser());
@@ -31,7 +40,6 @@ app.configure('production', function(){
 });
 
 // Routes
-
 require('./routes')(app, model, sys);
 
 app.listen(process.env.PORT || 3000);
