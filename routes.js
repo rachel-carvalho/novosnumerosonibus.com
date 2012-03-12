@@ -29,11 +29,6 @@ module.exports = function(app, model, sys){
     });
   });
   
-  app.get('/heya', function(req, res){
-    res.header('Content-Type', 'text/plain');
-    res.send('howdy ho');
-  });
-  
   app.get('/import', function(req, res){
     var raw = fs.readFileSync('./data.txt', 'utf-8');
     
