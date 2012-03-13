@@ -17,7 +17,7 @@ html(lang='pt')
     script(type='text/javascript', src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js')
     script(type='text/javascript', src='/js/scripts.js')
     script(type='text/javascript', src='/js/add2home.js')
-    - if(codes)
+    - if(typeof(codes) != 'undefined')
       - var code = '<script type="text/javascript">' + codes.join('\r\n') + '</script>';
       != code
     script(type="text/javascript")

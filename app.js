@@ -16,7 +16,6 @@ var sys = require('sys');
 app.configure(function(){
   // www redirect
   app.use(function(req, res, next){
-    console.log(req.headers.host, req.originalUrl);
     if((/^www\..+/).test(req.headers.host))
       res.redirect('http://novosnumerosonibus.com' + req.originalUrl);
     else
