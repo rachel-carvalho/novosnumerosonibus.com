@@ -9,7 +9,7 @@
     "node": "0.6.13"
   }
   , "dependencies": {
-      "express": "2.4.3"
+      "express": "2.5.9"
     , "jade": "0.13.0"
     , "connect-assets": "2.2.0"
   }
