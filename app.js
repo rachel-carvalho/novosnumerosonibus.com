@@ -9,8 +9,6 @@ var app = module.exports = express.createServer();
 
 var model = require('./model');
 
-var sys = require('sys');
-
 // Configuration
 
 app.configure(function(){
@@ -40,7 +38,7 @@ app.configure('production', function(){
 });
 
 // Routes
-require('./routes')(app, model, sys);
+require('./routes')(app, model);
 
 app.listen(process.env.PORT || 3000);
 console.log("Express server listening on port %d", app.address().port);

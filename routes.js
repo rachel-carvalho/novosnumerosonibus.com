@@ -12,21 +12,27 @@ String.prototype.trim = function() {
     return this.replace(/^\s*|\s*$/g, '');
 };
 
-module.exports = function(app, model, sys){
+module.exports = function(app, model){
+
+  var get_data = function(){
+    var items = model.bus_lines.find_all();
+    var data = {areas: {}, items: items};
+    data.areas['Intersul (A)'] = 'a';
+    data.areas['Internorte (B)'] = 'b';
+    data.areas['Transcarioca (C)'] = 'c';
+    data.areas['Santa Cruz (D)'] = 'd';
+    return data;
+  };
 
   app.get('/', function(req, res){
-    var items = model.bus_lines.find_all();
-    var area_classes = {};
-    area_classes['Intersul (A)'] = 'area-a';
-    area_classes['Internorte (B)'] = 'area-b';
-    area_classes['Transcarioca (C)'] = 'area-c';
-    area_classes['Santa Cruz (D)'] = 'area-d';
-    sys.inspect
+    var data = get_data();
     res.render('index', {
-      items: items,
-      area_classes: area_classes,
-      codes: ['var items = ' + JSON.stringify(items) + '; var area_classes = ' + JSON.stringify(area_classes) + ';']
+      initcode: ['var data = ' + JSON.stringify(data) + ';']
     });
+  });
+  
+  app.get('/data.json', function(req, res){
+    res.send(get_data());
   });
   
   app.get('/import', function(req, res){

@@ -64,7 +64,7 @@ $(document).ready(function(){
     var search_result = [];
     
     if(all_items){
-      search_result = items;
+      search_result = data.items;
     }
     else{
       var num = prev_inpt.val().toLowerCase();
@@ -85,8 +85,8 @@ $(document).ready(function(){
         
         num = parts.join('');
 
-        for(var i = 0; i < items.length; i++){
-          var item_num = prev ? items[i].previous_number : items[i].current_number;
+        for(var i = 0; i < data.items.length; i++){
+          var item_num = prev ? data.items[i].previous_number : data.items[i].current_number;
           
           var parts = item_num.match(/[a-z]+|\d+/ig);
           
@@ -98,7 +98,7 @@ $(document).ready(function(){
           }
           
           if(item_num.toLowerCase() == num)
-            search_result.push(items[i]);
+            search_result.push(data.items[i]);
         }
       }
     }
@@ -186,7 +186,7 @@ function render_lines(items, container, template_row, num, prev){
     
     row.find('.curr-num').html(item.current_number);
     row.find('.it').html(item.itinerary);
-    row.addClass(area_classes[item.area]);
+    row.addClass('area-' + data.areas[item.area]);
     var extras = row.find('.extras');
     if(item.extras.length > 0){
       var treated_extras = [];

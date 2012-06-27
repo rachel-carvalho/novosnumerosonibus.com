@@ -17,8 +17,8 @@ html(lang='pt')
     script(type='text/javascript', src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js')
     != js('scripts')
     != js('add2home')
-    - if(typeof(codes) != 'undefined')
-      - var code = '<script type="text/javascript">' + codes.join('\r\n') + '</script>';
+    - if(typeof(initcode) != 'undefined')
+      - var code = '<script type="text/javascript">' + initcode.join('\r\n') + '</script>';
       != code
     script(type="text/javascript")
       window.google_analytics_uacct = "UA-4475762-18";
