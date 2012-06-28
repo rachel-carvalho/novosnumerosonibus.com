@@ -1,11 +1,69 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="pt">
 <head>
   <meta charset="utf-8" />
-  <title>Novos números Android</title>
-  <script src="cordova-1.8.0.js"></script>
+  <title>Novos números de ônibus no Rio de Janeiro - RJ</title>
+  <meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" name="viewport" />
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/mobile.css" rel="stylesheet" />
+  <script src="js/cordova-1.8.1.android.js"></script>
+  <script src="js/jquery-1.7.2.min.js"></script>
+  <script src="js/offlinedata.js"></script>
+  <script src="js/mobile-specific.js"></script>
+  <script src="js/scripts.js"></script>
 </head>
 <body>
-  <h1>novos números nativo!</h1>
+  <h1>Novos números de ônibus no Rio</h1>
+  <div id="debug"></div>
+  <div id="search">
+    <div>
+      <label for="prev">nº antigo:</label>
+      <input type="text" id="prev" />
+    </div>
+    <div>
+      <span>ou</span>
+      <label for="curr">nº novo:</label>
+      <input type="text" id="curr" />
+    </div>
+  </div>
+  <button class="hidden" id="scroll"><span>↓</span></button>
+  <p class="hidden" id="summary"></p>
+  <div class="hidden" id="result">
+    <div class="item">
+      <div class="numbers">
+        <span class="prev-num"></span>
+        <label> 
+          <span>─►</span>
+        </label>
+        <span class="curr-num"></span>
+      </div>
+      <div class="it"></div>
+      <div class="extras"></div>
+      <div class="area"></div>
+    </div>
+  </div>
+  <a id="list-all" href="#/todas/">listar todas as linhas</a>
+  <div id="footer">
+    <span>Fontes:</span>
+    <ul>
+      <li>
+        <a target="_blank" href="http://www.fetranspor.com.br/images/stories/noticias/tabeladelinhas.pdf" id="number-source">
+          Tabela de linhas - Fetranspor
+        </a>
+      </li>
+      <li>
+        <a target="_blank" href="http://www.fetranspor.com.br/brs/brs.php" id="brs-source">
+          Informações BRS - Fetranspor
+        </a>
+      </li>
+    </ul>
+    <span class="info">
+      Este site não é propriedade, não é operado nem possui nenhum vínculo com a Prefeitura do Rio de Janeiro, 
+      com a Fetranspor ou com o Rio Ônibus.
+    </span>
+    <span class="info">
+      <a href="mailto:contato@novosnumerosonibus.com">contato@novosnumerosonibus.com</a>
+    </span>
+  </div>
 </body>
 </html>
