@@ -1,1 +1,10 @@
 body { background-color: #fff; }
+
+input { border-radius: 6px; border: 4px solid #999; }
+
+/* Pixel ratio of 2. Background-size is 1/2 = 50% (of a 200px image) */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+  #result .numbers label { background-image: url('../img/hires/arrow.png'); background-size: 100%; }
+  #scroll { background-image: url('../img/hires/arrow-down.png'); background-size: 50%; }
+}
+
