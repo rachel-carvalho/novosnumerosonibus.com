@@ -25,12 +25,12 @@ var readyEvent = function(handler){
     
     $('input').keydown(save_search).keyup(save_search).blur(save_search);
     
-    navigator.splashscreen.hide();
     handler();
     if(localStorage.last_search){
       var s = JSON.parse(localStorage.last_search);
       $('#' + s.type).val(s.value).blur();
     }
+    navigator.splashscreen.hide();
   };
   
   var download_data = function(){
