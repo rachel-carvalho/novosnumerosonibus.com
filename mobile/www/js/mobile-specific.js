@@ -3,7 +3,19 @@ var remote_url = 'http://novosnumerosonibus.com/';
 // while debugging
 remote_url = 'http://192.168.1.101:3000/';
 
-var data = offlinedata;
+window.data = offlinedata;
+
+var persist_data = function(){
+  localStorage.data = JSON.stringify(data);
+  localStorage.updated_at = data.updated_at;
+};
+
+var purge_off_data = function(){
+  if(window.offlinedata){
+    window.offlinedata = null;
+    delete window.offlinedata;
+  }
+};
 
 var readyEvent = function(handler){
   var go = function() {
@@ -14,18 +26,24 @@ var readyEvent = function(handler){
   var download_data = function(){
     $.getJSON(remote_url + 'data.json', function(d){
       data = d;
-      alert('new data ' + d.updated_at);
+      persist_data();
+      purge_off_data();
       go();
     })
     .error(function(e) {
-      alert('offline data (actual data)');
       go();
     });
   };
 
   var newhandler = function(){
+    if(!localStorage.data)
+      persist_data();
+    else {
+      data = JSON.parse(localStorage.data);
+      purge_off_data();
+    }
+    
     data.updated_at = new Date(data.updated_at);
-    data.updated_at = new Date(2010,1,1);
     
     // try to load from website
     navigator.app.clearCache();
@@ -35,12 +53,10 @@ var readyEvent = function(handler){
         download_data();
       }
       else {
-        alert('data is up to date (' + data.updated_at + ', ' + new Date(i.updated_at) + ')');
         go();
       }
     })
     .error(function(e) {
-      alert('offline data (data info)');
       go();
     });
   };
