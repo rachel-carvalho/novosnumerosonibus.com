@@ -19,8 +19,18 @@ var purge_off_data = function(){
 
 var readyEvent = function(handler){
   var go = function() {
+    var save_search = function(){
+      localStorage.last_search = JSON.stringify({type: this.id, value: this.value});
+    };
+    
+    $('input').keydown(save_search).keyup(save_search).blur(save_search);
+    
     navigator.splashscreen.hide();
     handler();
+    if(localStorage.last_search){
+      var s = JSON.parse(localStorage.last_search);
+      $('#' + s.type).val(s.value).blur();
+    }
   };
   
   var download_data = function(){
