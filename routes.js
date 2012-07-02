@@ -17,6 +17,7 @@ module.exports = function(app, model){
   var get_data = function(){
     var items = model.bus_lines.find_all();
     var data = {areas: {}, items: items};
+    data.updated_at = model.bus_lines.info.updated_at;
     data.areas['Intersul (A)'] = 'a';
     data.areas['Internorte (B)'] = 'b';
     data.areas['Transcarioca (C)'] = 'c';
@@ -31,7 +32,15 @@ module.exports = function(app, model){
     });
   });
   
+  app.get('/data_info.json', function(req, res){
+    res.header('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
+    res.header('Pragma', 'no-cache');
+    res.send(model.bus_lines.info);
+  });
+  
   app.get('/data.json', function(req, res){
+    res.header('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
+    res.header('Pragma', 'no-cache');
     res.send(get_data());
   });
   

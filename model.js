@@ -6,6 +6,9 @@ module.exports = {
   bus_lines: {
     find_all: function(){
       return module.exports.lists.bus_lines;
+    },
+    info: {
+      updated_at: new Date(Date.UTC(2012, 2, 12, 18, 49, 3, 0)).getTime()
     }
   }
   
