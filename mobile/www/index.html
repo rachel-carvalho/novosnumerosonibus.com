@@ -15,33 +15,45 @@
 <body>
   <h1>Novos números de ônibus no Rio</h1>
   <div id="debug"></div>
-  <div id="search">
-    <div>
-      <label for="prev">nº antigo:</label>
-      <input type="text" id="prev" />
-    </div>
-    <div>
-      <span>ou</span>
-      <label for="curr">nº novo:</label>
-      <input type="text" id="curr" />
-    </div>
-  </div>
-  <button class="hidden" id="scroll"><span>↓</span></button>
-  <p class="hidden" id="summary"></p>
-  <div class="hidden" id="result">
-    <div class="item">
-      <div class="numbers">
-        <span class="prev-num"></span>
-        <label><span>─►</span></label>
-        <span class="curr-num"></span>
+  <div id="main">
+    <div id="search">
+      <div>
+        <label for="prev">nº antigo:</label>
+        <input type="text" id="prev" />
       </div>
-      <div class="it"></div>
-      <div class="extras"></div>
-      <div class="area"></div>
+      <div>
+        <span>ou</span>
+        <label for="curr">nº novo:</label>
+        <input type="text" id="curr" />
+      </div>
     </div>
+    <button class="hidden" id="scroll"><span>↓</span></button>
+    <p class="hidden" id="summary"></p>
+    <div class="hidden" id="result">
+      <div class="item">
+        <div class="numbers">
+          <span class="prev-num"></span>
+          <label><span>─►</span></label>
+          <span class="curr-num"></span>
+        </div>
+        <div class="it"></div>
+        <div class="extras"></div>
+        <div class="area"></div>
+      </div>
+    </div>
+    <a id="list-all" href="#/todas/">listar todas as linhas</a>
   </div>
-  <a id="list-all" href="#/todas/">listar todas as linhas</a>
-  <div id="footer">
+  <div id="info" class="hidden">
+    <h2>Sobre</h2>
+    <p>
+      As informações aqui contidas foram baseadas na tabela de linhas novas e antigas divulgada pela Fetranspor e no 
+      site que contém informações de BRS, também da Fetranspor.
+    </p>
+    <p>
+      Este aplicativo é uma versão nativa do site
+      <a href="http://novosnumerosonibus.com/">novosnumerosonibus.com</a> e funciona também sem acesso à internet.
+      Desenvolvido por Rachel Carvalho &lt;rachel.carvalho@gmail.com&gt;.
+    </p>
     <span>Fontes:</span>
     <ul>
       <li>
@@ -56,12 +68,17 @@
       </li>
     </ul>
     <span class="info">
-      Este site não é propriedade, não é operado nem possui nenhum vínculo com a Prefeitura do Rio de Janeiro, 
+      Este aplicativo não é propriedade, nem possui nenhum vínculo com a Prefeitura do Rio de Janeiro, 
       com a Fetranspor ou com o Rio Ônibus.
     </span>
     <span class="info">
       <a href="mailto:contato@novosnumerosonibus.com">contato@novosnumerosonibus.com</a>
     </span>
   </div>
+  <div id="footer">
+    <a id="open-info" href="javascript:void(0);" title="sobre"><span>sobre</span></a>
+    <a id="open-help" href="javascript:void(0);" title="ajuda"><span>ajuda</span></a>
+  </div>
+
 </body>
 </html>

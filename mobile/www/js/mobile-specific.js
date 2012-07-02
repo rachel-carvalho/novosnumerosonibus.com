@@ -17,6 +17,9 @@ var purge_off_data = function(){
   }
 };
 
+var has_pos_fix = true;
+var pos_fix_support = {Android: 2.2, iPhone: 5, iPad: 5};
+
 var readyEvent = function(handler){
   var go = function() {
     var save_search = function(){
@@ -25,6 +28,29 @@ var readyEvent = function(handler){
     
     $('input').keydown(save_search).keyup(save_search).blur(save_search);
     
+    var info = $('#info');
+    var main = $('#main');
+    
+    $('#open-info').click(function(){
+      info.toggleClass('hidden');
+      main.toggleClass('hidden');
+    });
+    
+    var end = device.platform.indexOf(' ');
+    if(end < 0) end = device.platform.length;
+    var p = device.platform.substr(0, end);
+    var v = parseFloat(device.version.substr(0, 3));
+    
+    has_pos_fix = pos_fix_support[p] && pos_fix_support[p] <= v;
+    
+    if(!has_pos_fix)
+      $('#footer').css('position', 'static');
+    
+    $(window).resize(function(){
+      if(has_pos_fix)
+        $('body').css('padding-bottom', $('#footer').outerHeight());
+    });
+        
     handler();
     if(localStorage.last_search){
       var s = JSON.parse(localStorage.last_search);
