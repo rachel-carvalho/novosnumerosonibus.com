@@ -2,12 +2,7 @@ var remote_url = 'http://novosnumerosonibus.com/';
 
 // while debugging
 remote_url = 'http://192.168.1.101:3000/';
-
-if(navigator.appCodeName == 'Mozilla'){
-  window.device = {platform: 'Android', version: '2.3'};
-  navigator.app = {clearCache: function(){}};
-  navigator.splashscreen = {hide:function(){}};
-}
+var in_debug = false;
 
 window.data = offlinedata;
 
@@ -29,6 +24,18 @@ var pos_fix_support = {Android: 2.2, iPhone: 5, iPad: 5};
 var help = null;
 
 var h_spans = null;
+
+var debug = null;
+var begin = new Date();
+
+var dbg = function(what){
+  if(!in_debug) return;
+  
+  if(!debug) debug = $('#debug');
+  var e = new Date() - begin;
+  var elapsed = e.toString() + ' ms';
+  debug.append('[' + elapsed + '] ' + what + '<br />');
+};
 
 var update_help = function(){
   if(!h_spans){
@@ -146,20 +153,24 @@ var readyEvent = function(handler){
       if(is_curr_search(s)) s = searches.pop();
     }
     $('#search input').val('');
-    $('#' + s.type).focus().val(s.value).blur();
+    $('#' + s.type).val(s.value).blur();
   };
   
   var go = function() {
+    dbg('after having data');
+    
     // saves last search to local storage
     var save_search = function(){
       localStorage.last_search = JSON.stringify({type: this.id, value: this.value});
     };
-        
+
     $('input').keydown(save_search).keyup(save_search).blur(save_search);
     
     var s = $('#search');
     var inp = s.find('input:first');
     s.width(inp.position().left + inp.outerWidth() + $('#scroll').outerWidth());
+
+    dbg('after setting search width');
     
     // handles info & help buttons
     var info = $('#info');
@@ -184,8 +195,12 @@ var readyEvent = function(handler){
       }
       help.toggleClass('hidden');
     });
-        
+
+    dbg('after info & help');
+
     handle_pos_fix();
+
+    dbg('after position fix');
     
     // handles back button
     $(document).bind('backbutton', function() {
@@ -203,19 +218,25 @@ var readyEvent = function(handler){
     $(window).resize(update_help);
     update_help();
 
+    dbg('after help');
+
     // calls regular handler
     handler();
+
+    dbg('after regular handler');
 
     // retrieves last search
     if(localStorage.last_search)
       search_num(JSON.parse(localStorage.last_search));
+
+    dbg('after last search (end)');
     
     // hides splash screen
     navigator.splashscreen.hide();
   };
   
   var download_data = function(){
-    $.getJSON(remote_url + 'data.json', function(d){
+    $.getJSON(remote_url + 'data.json?' + (new Date()).getTime(), function(d){
       data = d;
       persist_data();
       purge_off_data();
@@ -227,29 +248,40 @@ var readyEvent = function(handler){
   };
 
   var newhandler = function(){
+    dbg('first handler');
+
     if(!localStorage.data)
       persist_data();
     else {
-      data = JSON.parse(localStorage.data);
-      purge_off_data();
+      // only loads from local storage if different from already loaded js
+      if(new Date(data.updated_at) < new Date(localStorage.updated_at)) {
+        data = JSON.parse(localStorage.data);
+        purge_off_data();
+      }
     }
     
     data.updated_at = new Date(data.updated_at);
     
-    // try to load from website
-    navigator.app.clearCache();
-    $.getJSON(remote_url + 'data_info.json', function(i){
-      var new_upd = new Date(i.updated_at);
-      if(data.updated_at < new_upd) {
-        download_data();
-      }
-      else {
+    dbg('after handling offline data');
+
+    // try to load from website when on wifi
+    var conn = navigator.network.connection.type;
+    if(conn == Connection.WIFI || conn == Connection.ETHERNET){
+      $.getJSON(remote_url + 'data_info.json?' + (new Date()).getTime(), function(i){
+        var new_upd = new Date(i.updated_at);
+        if(data.updated_at < new_upd) {
+          download_data();
+        }
+        else {
+          go();
+        }
+      })
+      .error(function(e) {
         go();
-      }
-    })
-    .error(function(e) {
+      });
+    }
+    else
       go();
-    });
   };
 
   $(document).ready(function(){

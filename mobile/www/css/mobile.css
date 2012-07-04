@@ -14,6 +14,7 @@ input {
 h2 { margin: 0; padding: 0; }
 
 #search { margin: auto; }
+#list-all { text-align: center; }
 
 #open-info, #open-help {
   width: 2em;
