@@ -107,7 +107,16 @@ var update_help = function(){
     help.css('opacity', 1).addClass('hidden');
 };
 
-var on_search = function() {
+var searches = [];
+
+var on_search = function(input) {
+  if(!$('#result').hasClass('hidden')){
+    var s = {type: input.attr('id'), value: input.val()};
+    var last_search = searches.length ? searches[searches.length-1] : {};
+    
+    if(last_search.type != s.type || last_search.value != s.value)
+      searches.push(s);
+  }
   update_help();
 };
 
@@ -125,6 +134,19 @@ var readyEvent = function(handler){
       footer.css('position', 'static');
     else
       $('body').css('padding-bottom', footer.height());
+  };
+  
+  var is_curr_search = function(s){
+    return $('#' + s.type).val() == s.value;
+  };
+  
+  var search_num = function(s){
+    if(!s){
+      s = searches.pop();
+      if(is_curr_search(s)) s = searches.pop();
+    }
+    $('#search input').val('');
+    $('#' + s.type).focus().val(s.value).blur();
   };
   
   var go = function() {
@@ -157,13 +179,25 @@ var readyEvent = function(handler){
       open_i.toggle();
       open_h.toggleClass('close');
       if($('#result').hasClass('hidden')){
-        $('#prev').val('2113').blur();
+        search_num({type: 'prev', value: '2113'});
         update_help();
       }
       help.toggleClass('hidden');
     });
         
     handle_pos_fix();
+    
+    // handles back button
+    $(document).bind('backbutton', function() {
+      if(!help.hasClass('hidden'))
+        open_h.click();
+      else if(!info.hasClass('hidden'))
+        open_i.click();
+      else if(searches.length && (searches.length > 1 || !is_curr_search(searches[searches.length - 1])))
+        search_num();
+      else
+        navigator.app.exitApp();
+    });
 
     // hooks to resize to handle help pane position
     $(window).resize(update_help);
@@ -173,10 +207,8 @@ var readyEvent = function(handler){
     handler();
 
     // retrieves last search
-    if(localStorage.last_search){
-      var s = JSON.parse(localStorage.last_search);
-      $('#' + s.type).val(s.value).blur();
-    }
+    if(localStorage.last_search)
+      search_num(JSON.parse(localStorage.last_search));
     
     // hides splash screen
     navigator.splashscreen.hide();
@@ -221,10 +253,7 @@ var readyEvent = function(handler){
   };
 
   $(document).ready(function(){
-    if(!window.device)
-      $(document).bind('deviceready', newhandler);
-    else
-      newhandler();
+    $(document).bind('deviceready', newhandler);
   });
 };
 

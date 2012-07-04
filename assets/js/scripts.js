@@ -137,7 +137,7 @@ var onready = function(){
     
     render_lines(search_result, container, template_row, num, prev);
     
-    if(typeof(on_search) == 'function') on_search();
+    if(typeof(on_search) == 'function') on_search(active_inpt);
   };
   
   scroll.click(function(){
