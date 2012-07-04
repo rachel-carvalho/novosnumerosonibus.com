@@ -11,7 +11,9 @@ input {
   box-shadow: inset 0.04em 0.04em 0.12em #999;
 }
 
-h2 { margin: 0; padding: 0; padding-bottom: 1em; }
+h2 { margin: 0; padding: 0; }
+
+#search { margin: auto; }
 
 #open-info, #open-help {
   width: 2em;
@@ -25,7 +27,7 @@ h2 { margin: 0; padding: 0; padding-bottom: 1em; }
 
 #open-info span, #open-help span { display: none; }
 
-#footer { position: fixed; left: 0; right: 0; bottom: 0; padding: 1em; }
+#footer { position: fixed; left: 0; right: 0; bottom: 0; padding: 0; box-sizing: border-box; }
 
 #info {
   padding: 1em;
@@ -34,6 +36,37 @@ h2 { margin: 0; padding: 0; padding-bottom: 1em; }
 a {color: #0080b0; }
 
 #info span.info { font-size: 0.7em; }
+
+#help {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#help h2 { display: none; }
+
+#help span {
+  background-color: rgba(120, 120, 120, 0.75);
+  margin: 1px;
+  padding: 0.5em;
+  color: #fff;
+  font-weight: bold;
+  -webkit-text-shadow: 0 1px 2px #000;
+  text-shadow: 0 1px 2px #000;
+  -webkit-border-radius: 0.3em;
+  border-radius: 0.3em;
+  position: absolute;
+}
+
+#help #item {background-color: transparent; padding: 0;}
+
+a.close {
+  background-image: url('../img/close.png') !important;
+}
+
+#result .numbers label { display: inline-block; width: 24px; height: 24px; }
+#result .numbers label span { font-size: 1px; }
 
 /* Pixel ratio of 2. Background-size is 1/2 = 50% (of a 200px image) */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
