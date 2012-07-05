@@ -69,6 +69,15 @@ a.close {
 #result .numbers label { display: inline-block; width: 24px; height: 24px; }
 #result .numbers label span { font-size: 1px; }
 
+#scroll-up span { display: none; }
+#scroll-up {
+  border: 0px;
+  background: url('../img/arrow-up.png') center center no-repeat;
+  background-size: 50%;
+  width: 43px; height: 40px;
+  position: absolute; padding: 0px; top: 0; right: 10px;
+}
+
 /* Pixel ratio of 2. Background-size is 1/2 = 50% (of a 200px image) */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
   #result .numbers label { background-image: url('../img/hires/arrow.png'); background-size: 100%; }

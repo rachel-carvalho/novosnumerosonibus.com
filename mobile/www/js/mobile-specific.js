@@ -157,8 +157,30 @@ var readyEvent = function(handler){
     $('#' + s.type).val(s.value).blur();
   };
   
+  var handle_scroll_up = function() {
+    var s = $('#scroll-up');
+    var w = $(window);
+    w.scroll(function(){
+      var i = $('#result .item:first');
+      if(i.parent().hasClass('hidden'))
+        return true;
+      var top = w.scrollTop();
+      var p = i.position();
+      if(top >= p.top)
+        s.removeClass('hidden').stop().animate({top: top + 10}, 400);
+      else
+        s.addClass('hidden').css('top', 0);
+    });
+    
+    s.click(function(){
+      $('html:not(:animated),body:not(:animated)').animate({ scrollTop: 0 });
+    });
+  };
+  
   var go = function() {
     dbg('after having data');
+    
+    handle_scroll_up();    
     
     // saves last search to local storage
     var save_search = function(){
@@ -287,6 +309,13 @@ var readyEvent = function(handler){
 
   $(document).ready(function(){
     $(document).bind('deviceready', newhandler);
+    if(!isMobile){
+      navigator.network = {connection: {type: ''}};
+      window.Connection = {WIFI: 10, ETHERNET: 20};
+      device = {platform: 'Android', version: '2.2'};
+      navigator.splashscreen = {hide: function(){}};
+      newhandler();
+    }
   });
 };
 
