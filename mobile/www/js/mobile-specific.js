@@ -169,7 +169,7 @@ var readyEvent = function(handler){
       if(top >= p.top)
         s.removeClass('hidden').stop().animate({top: top + 10}, 400);
       else
-        s.addClass('hidden').css('top', 0);
+        s.addClass('hidden').css('top', -50);
     });
     
     s.click(function(){
@@ -201,10 +201,39 @@ var readyEvent = function(handler){
     help = $('#help');
     var open_i = $('#open-info');
     var open_h = $('#open-help');
+    
+    var win = $(window);
+    var h1 = $('h1');
+    var win_w = win.width();
+    var info_top = h1.outerHeight(true);
+    info.css({left: win_w, top: info_top, width: win_w, height: win.height() - info_top});
+    win.resize(function(){
+      win_w = win.width();
+      info_top = h1.outerHeight(true);
+      var css = {left: win_w, top: info_top, width: win_w, height: win.height() - info_top};
+      if(!info.is(':hidden')){
+        css.left = 0;
+        css.height = '';
+      }
+      info.css(css);
+    });
 
     open_i.click(function(){
-      info.toggleClass('hidden');
-      main.toggleClass('hidden');
+      if(open_i.hasClass('close')){
+        var t = info.position().top;
+        main.removeClass('hidden');
+        info.stop().css({position: 'absolute', height: win.height() - t})
+        .animate({left: win.width()}, 'slow', function(){
+          info.addClass('hidden');
+        });
+      }
+      else{
+        info.stop().removeClass('hidden')
+        .animate({left: 0}, 'slow', function(){
+          main.addClass('hidden');
+          info.css({position: 'static', height: ''});
+        });
+      }
       open_h.toggle();
       open_i.toggleClass('close');
     });
@@ -216,7 +245,7 @@ var readyEvent = function(handler){
         search_num({type: 'prev', value: '2113'});
         update_help();
       }
-      help.toggleClass('hidden');
+      help.fadeToggle(400);
     });
 
     dbg('after info & help');

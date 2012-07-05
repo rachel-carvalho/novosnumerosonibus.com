@@ -11,7 +11,11 @@ input {
   box-shadow: inset 0.04em 0.04em 0.12em #999;
 }
 
+h1 { margin-bottom: 0.4em; }
+
 h2 { margin: 0; padding: 0; }
+
+#main { padding-top: 0.1em; }
 
 #search { margin: auto; }
 #list-all { text-align: center; }
@@ -32,6 +36,8 @@ h2 { margin: 0; padding: 0; }
 
 #info {
   padding: 1em;
+  position: absolute;
+  background-color: #fff;
 }
 
 a {color: #0080b0; }
