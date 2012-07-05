@@ -28,7 +28,7 @@ h2 { margin: 0; padding: 0; }
 
 #open-info span, #open-help span { display: none; }
 
-#footer { position: fixed; left: 0; right: 0; bottom: 0; padding: 0; box-sizing: border-box; }
+#footer { position: fixed; left: 0; right: 0; bottom: 0; padding: 0; box-sizing: border-box; overflow: hidden; }
 
 #info {
   padding: 1em;

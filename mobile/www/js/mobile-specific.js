@@ -46,7 +46,8 @@ var update_help = function(){
   
   var top = $('h1').outerHeight();
   var h = Math.max($(document).outerHeight(), $(window).height());
-  help.css({top: top, height: h - top});
+  var diff = has_pos_fix ? 0 : $('#footer').outerHeight();
+  help.css({top: top, height: h - top - diff});
   
   if($('#result').hasClass('hidden'))
     return;
