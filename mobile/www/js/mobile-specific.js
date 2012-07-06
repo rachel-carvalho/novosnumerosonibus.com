@@ -262,9 +262,9 @@ var readyEvent = function(handler){
     
     // handles back button
     $(document).bind('backbutton', function() {
-      if(!help.hasClass('hidden'))
+      if(!help.is(':hidden'))
         open_h.click();
-      else if(!info.hasClass('hidden'))
+      else if(!info.is(':hidden'))
         open_i.click();
       else if(searches.length && (searches.length > 1 || !is_curr_search(searches[searches.length - 1])))
         search_num();
