@@ -21,6 +21,8 @@ var purge_off_data = function(){
 var has_pos_fix = true;
 var pos_fix_support = {Android: 2.2, iPhone: 5, iPad: 5};
 
+var h1 = null;
+
 var help = null;
 
 var h_spans = null;
@@ -44,7 +46,7 @@ var update_help = function(){
       ex: $('#ex'), sector: $('#sector') };
   }
   
-  var top = $('h1').outerHeight();
+  var top = h1.outerHeight();
   var h = Math.max($(document).outerHeight(), $(window).height());
   var diff = has_pos_fix ? 0 : $('#footer').outerHeight();
   help.css({top: top, height: h - top - diff});
@@ -180,6 +182,8 @@ var readyEvent = function(handler){
   var go = function() {
     dbg('after having data');
     
+    h1 = $('h1');
+    
     handle_scroll_up();    
     
     // saves last search to local storage
@@ -203,7 +207,6 @@ var readyEvent = function(handler){
     var open_h = $('#open-help');
     
     var win = $(window);
-    var h1 = $('h1');
     var win_w = win.width();
     var info_top = h1.outerHeight(true);
     info.css({left: win_w, top: info_top, width: win_w, height: win.height() - info_top});
@@ -216,6 +219,9 @@ var readyEvent = function(handler){
         css.height = '';
       }
       info.css(css);
+
+      // handles help pane position
+      update_help();
     });
 
     open_i.click(function(){
@@ -266,8 +272,6 @@ var readyEvent = function(handler){
         navigator.app.exitApp();
     });
 
-    // hooks to resize to handle help pane position
-    $(window).resize(update_help);
     update_help();
 
     dbg('after help');
@@ -297,7 +301,7 @@ var readyEvent = function(handler){
 
   var newhandler = function(){
     dbg('first handler');
-
+    
     if(!localStorage.data)
       persist_data();
     else {
