@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <title>Novos números de ônibus no Rio de Janeiro - RJ</title>
+  <script src="js/jquery-1.7.2.min.js"></script>
+  <script>
+    var log = console.log;
+    log = function(text){
+      $('body').append(text + '<br>');
+    }
+    $(document).ready(function(){
+      $('#ajax').click(function(){
+        var init = new Date();
+        log('calling ajax');
+        $.getJSON('test.json', function(i){
+          log('ajax is back in ' + ((new Date()) - init));
+        });
+      });
+      
+      $('#for').click(function(){
+        var init = new Date();
+        for(var i = 0; i < 200000; i++){
+          console.log('for: ' + i);
+        }
+        log('for: ' + ((new Date) - init) + ' ms');
+      });
+
+      $('#both').click(function(){
+        var a = $('#ajax');
+        var f = $('#for');
+        a.click(); f.click();
+      });
+    });
+  </script>  
+</head>
+<body>
+
+<button id="ajax">ajax</button>
+<button id="for">for</button>
+<button id="both">both</button>
+
+</body>
+</html>

@@ -292,11 +292,7 @@ var readyEvent = function(handler){
       data = d;
       persist_data();
       purge_off_data();
-      go();
     })
-    .error(function(e) {
-      go();
-    });
   };
 
   var newhandler = function(){
@@ -324,16 +320,10 @@ var readyEvent = function(handler){
         if(data.updated_at < new_upd) {
           download_data();
         }
-        else {
-          go();
-        }
-      })
-      .error(function(e) {
-        go();
       });
     }
-    else
-      go();
+
+    go();
   };
 
   $(document).ready(function(){

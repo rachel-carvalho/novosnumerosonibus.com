@@ -33,15 +33,23 @@ module.exports = function(app, model){
   });
   
   app.get('/data_info.json', function(req, res){
+    console.log('sending info');
     res.header('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
     res.header('Pragma', 'no-cache');
     res.send(model.bus_lines.info);
   });
   
   app.get('/data.json', function(req, res){
+    console.log('sending data');
     res.header('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
     res.header('Pragma', 'no-cache');
     res.send(get_data());
+  });
+
+  app.get('/test.json', function(req, res){
+    res.header('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
+    res.header('Pragma', 'no-cache');
+    setTimeout(function(){res.send({alright: true});}, 100);
   });
   
   app.get('/import', function(req, res){
