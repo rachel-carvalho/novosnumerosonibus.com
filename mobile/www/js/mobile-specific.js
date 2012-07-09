@@ -179,8 +179,14 @@ var readyEvent = function(handler){
     });
   };
   
+  var show_ad = function(){
+    cordova.exec(null, null, 'org.novosnumeros.AdMobPlugin', '', []);
+  };
+
   var go = function() {
     dbg('after having data');
+    
+    show_ad();
     
     h1 = $('h1');
     
