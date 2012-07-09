@@ -51,11 +51,11 @@ var update_help = function(){
   var diff = has_pos_fix ? 0 : $('#footer').outerHeight();
   help.css({top: top, height: h - top - diff});
   
-  if($('#result').hasClass('hidden'))
+  if($('#result').is(':hidden'))
     return;
 
   var was_hidden = false;
-  if(help.hasClass('hidden')){
+  if(help.is(':hidden')){
     help.css('opacity', 0).removeClass('hidden');
     was_hidden = true;
   }
@@ -120,7 +120,7 @@ var update_help = function(){
 var searches = [];
 
 var on_search = function(input) {
-  if(!$('#result').hasClass('hidden')){
+  if(!$('#result').is(':hidden')){
     var s = {type: input.attr('id'), value: input.val()};
     var last_search = searches.length ? searches[searches.length-1] : {};
     
@@ -164,14 +164,14 @@ var readyEvent = function(handler){
     var w = $(window);
     w.scroll(function(){
       var i = $('#result .item:first');
-      if(i.parent().hasClass('hidden'))
+      if(i.parent().is(':hidden'))
         return true;
       var top = w.scrollTop();
       var p = i.position();
-      if(top >= p.top)
+      if( top >= p.top)
         s.removeClass('hidden').stop().animate({top: top + 10}, 400);
       else
-        s.addClass('hidden').css('top', -50);
+        s.addClass('hidden').css('top', '-50px');
     });
     
     s.click(function(){
@@ -215,11 +215,13 @@ var readyEvent = function(handler){
     var win = $(window);
     var win_w = win.width();
     var info_top = h1.outerHeight(true);
-    info.css({left: win_w, top: info_top, width: win_w, height: win.height() - info_top});
+    var win_h = Math.max(win.height(), $(document).height());
+    info.css({left: win_w, top: info_top, width: win_w, height: win_h - info_top});
     win.resize(function(){
       win_w = win.width();
+      win_h = Math.max(win.height(), $(document).height());
       info_top = h1.outerHeight(true);
-      var css = {left: win_w, top: info_top, width: win_w, height: win.height() - info_top};
+      var css = {left: win_w, top: info_top, width: win_w, height: win_h - info_top};
       if(!info.is(':hidden')){
         css.left = 0;
         css.height = '';
@@ -234,12 +236,14 @@ var readyEvent = function(handler){
       if(open_i.hasClass('close')){
         var t = info.position().top;
         main.removeClass('hidden');
-        info.stop().css({position: 'absolute', height: win.height() - t})
-        .animate({left: win.width()}, 'slow', function(){
+        info.stop().css({position: 'absolute', height: win.height() - t});
+        win.scroll();
+        info.animate({left: win.width()}, 'slow', function(){
           info.addClass('hidden');
         });
       }
       else{
+        win.scrollTop(0);
         info.stop().removeClass('hidden')
         .animate({left: 0}, 'slow', function(){
           main.addClass('hidden');
@@ -253,7 +257,7 @@ var readyEvent = function(handler){
     open_h.click(function(){
       open_i.toggle();
       open_h.toggleClass('close');
-      if($('#result').hasClass('hidden')){
+      if($('#result').is(':hidden')){
         search_num({type: 'prev', value: '2113'});
         update_help();
       }
@@ -343,6 +347,7 @@ var readyEvent = function(handler){
       window.Connection = {WIFI: 10, ETHERNET: 20};
       device = {platform: 'Android', version: '2.2'};
       navigator.splashscreen = {hide: function(){}};
+      cordova = {exec: function(){}};
       newhandler();
     }
   });

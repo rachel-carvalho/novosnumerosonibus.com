@@ -103,7 +103,7 @@ a.close {
   background: url('../img/arrow-up.png') center center no-repeat;
   background-size: 50%;
   width: 43px; height: 40px;
-  position: absolute; padding: 0px; top: 0; right: 10px;
+  position: absolute; padding: 0px; top: -50px; right: 10px;
 }
 
 /* Pixel ratio of 2. Background-size is 1/2 = 50% (of a 200px image) */
