@@ -1,7 +1,7 @@
 var remote_url = 'http://novosnumerosonibus.com/';
 
 // while debugging
-remote_url = 'http://192.168.1.101:3000/';
+//remote_url = 'http://192.168.1.101:3000/';
 var in_debug = false;
 
 window.data = offlinedata;
@@ -180,7 +180,7 @@ var readyEvent = function(handler){
   };
   
   var show_ad = function(){
-    cordova.exec(null, null, 'org.novosnumeros.AdMobPlugin', '', []);
+    cordova.exec(null, null, 'com.novosnumerosonibus.AdMobPlugin', '', []);
   };
 
   var go = function() {
