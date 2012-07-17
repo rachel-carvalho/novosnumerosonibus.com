@@ -32,7 +32,18 @@ html(lang='pt')
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
+    
+    //if lte IE 9	
+      style
+        h1 {
+          background: url('../img/bus_header_ie.png') 1em center no-repeat #355970;
+        }
+
   body
     h1 Novos números de ônibus no Rio
+    script
+      if(!isMobile)
+        $('body').addClass('desk');
+
     != body
 
