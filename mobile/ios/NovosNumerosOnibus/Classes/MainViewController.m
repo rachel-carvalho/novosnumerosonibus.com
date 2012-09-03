@@ -27,6 +27,16 @@
 
 #import "MainViewController.h"
 
+#define ADMOB_ID @"a15043db386e695";
+
+@interface MainViewController ()
+@property BOOL isLandscape;
+
+- (void) updateViewAd: (BOOL) considerBanner;
+
+
+@end
+
 @implementation MainViewController
 
 - (id) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -52,6 +62,54 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+
+    // admob
+    admobBanner = [[GADBannerView alloc] initWithAdSize: kGADAdSizeSmartBannerPortrait];
+    admobBanner.adUnitID = ADMOB_ID;
+
+    admobBanner.rootViewController = self;
+    admobBanner.delegate = self;
+    admobBanner.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
+
+    [self.view addSubview: admobBanner];
+
+    [admobBanner loadRequest: [GADRequest request]];
+    self.isLandscape = UIInterfaceOrientationIsLandscape(self.interfaceOrientation);
+}
+
+- (void) updateViewAd:(BOOL)considerBanner
+{
+    CGSize screen = self.view.frame.size;
+    CGSize banner = admobBanner.frame.size;
+
+    if(!considerBanner)
+        banner = CGSizeMake(0, 0);
+
+    if(self.isLandscape)
+        screen = CGSizeMake(screen.height, screen.width);
+
+    self.webView.frame = CGRectMake(0, 0, screen.width, screen.height - banner.height);
+    if(considerBanner)
+        admobBanner.frame = CGRectMake(0, self.webView.frame.size.height, screen.width, banner.height);
+}
+
+- (void) adViewDidReceiveAd:(GADBannerView *)view
+{
+    NSLog(@"new ad");
+    [self updateViewAd: YES];
+}
+
+- (void) willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    BOOL goingToLandscape = UIInterfaceOrientationIsLandscape(toInterfaceOrientation);
+
+    if(self.isLandscape != goingToLandscape){
+        NSLog(@"changed orientation");
+        self.isLandscape = goingToLandscape;
+        admobBanner.adSize = goingToLandscape ? kGADAdSizeSmartBannerLandscape : kGADAdSizeSmartBannerPortrait;
+        [admobBanner loadRequest: [GADRequest request]];
+        [self updateViewAd: NO];
+    }
 }
 
 - (void) viewDidUnload
@@ -65,6 +123,11 @@
 {
     // Return YES for supported orientations
     return [super shouldAutorotateToInterfaceOrientation:interfaceOrientation];
+}
+
+- (void)dealloc {
+    [admobBanner release];
+    [super dealloc];
 }
 
 /* Comment out the block below to over-ride */

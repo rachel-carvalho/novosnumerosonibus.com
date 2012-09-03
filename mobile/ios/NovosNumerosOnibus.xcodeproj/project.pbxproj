@@ -43,6 +43,8 @@
 		30A0434914DC770100060A13 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 30A0434614DC770100060A13 /* Localizable.strings */; };
 		30E1352710E2C1420031B30D /* Cordova.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30E1352610E2C1420031B30D /* Cordova.plist */; };
 		30E5649213A7FCAF007403D8 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E5649113A7FCAF007403D8 /* CoreMedia.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		CC60059015F4108C007C1635 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC60058F15F4108C007C1635 /* libGoogleAdMobAds.a */; };
+		CC60059215F410DF007C1635 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC60059115F410DF007C1635 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +121,17 @@
 		30E5649113A7FCAF007403D8 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		32CA4F630368D1EE00C91783 /* NovosNumerosOnibus-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NovosNumerosOnibus-Prefix.pch"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* NovosNumerosOnibus-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "NovosNumerosOnibus-Info.plist"; path = "../NovosNumerosOnibus-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		CC60058615F4108C007C1635 /* GADAdMobExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdMobExtras.h; sourceTree = "<group>"; };
+		CC60058715F4108C007C1635 /* GADAdNetworkExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdNetworkExtras.h; sourceTree = "<group>"; };
+		CC60058815F4108C007C1635 /* GADAdSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdSize.h; sourceTree = "<group>"; };
+		CC60058915F4108C007C1635 /* GADBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerView.h; sourceTree = "<group>"; };
+		CC60058A15F4108C007C1635 /* GADBannerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerViewDelegate.h; sourceTree = "<group>"; };
+		CC60058B15F4108C007C1635 /* GADInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitial.h; sourceTree = "<group>"; };
+		CC60058C15F4108C007C1635 /* GADInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitialDelegate.h; sourceTree = "<group>"; };
+		CC60058D15F4108C007C1635 /* GADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequest.h; sourceTree = "<group>"; };
+		CC60058E15F4108C007C1635 /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequestError.h; sourceTree = "<group>"; };
+		CC60058F15F4108C007C1635 /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAdMobAds.a; sourceTree = "<group>"; };
+		CC60059115F410DF007C1635 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +139,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				301BF5C5109A6A2B0062928A /* SystemConfiguration.framework in Frameworks */,
+				CC60059215F410DF007C1635 /* MessageUI.framework in Frameworks */,
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
@@ -138,9 +153,9 @@
 				301BF5BF109A6A2B0062928A /* CoreLocation.framework in Frameworks */,
 				301BF5C1109A6A2B0062928A /* MediaPlayer.framework in Frameworks */,
 				301BF5C3109A6A2B0062928A /* QuartzCore.framework in Frameworks */,
-				301BF5C5109A6A2B0062928A /* SystemConfiguration.framework in Frameworks */,
 				305D5FD1115AB8F900A74A75 /* MobileCoreServices.framework in Frameworks */,
 				30E5649213A7FCAF007403D8 /* CoreMedia.framework in Frameworks */,
+				CC60059015F4108C007C1635 /* libGoogleAdMobAds.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +202,8 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				CC60059115F410DF007C1635 /* MessageUI.framework */,
+				CC60058515F41071007C1635 /* AdMob */,
 				301BF56E109A69640062928A /* www */,
 				301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */,
 				080E96DDFE201D6D7F000001 /* Classes */,
@@ -304,6 +321,23 @@
 				30A0434614DC770100060A13 /* Localizable.strings */,
 			);
 			path = se.lproj;
+			sourceTree = "<group>";
+		};
+		CC60058515F41071007C1635 /* AdMob */ = {
+			isa = PBXGroup;
+			children = (
+				CC60058615F4108C007C1635 /* GADAdMobExtras.h */,
+				CC60058715F4108C007C1635 /* GADAdNetworkExtras.h */,
+				CC60058815F4108C007C1635 /* GADAdSize.h */,
+				CC60058915F4108C007C1635 /* GADBannerView.h */,
+				CC60058A15F4108C007C1635 /* GADBannerViewDelegate.h */,
+				CC60058B15F4108C007C1635 /* GADInterstitial.h */,
+				CC60058C15F4108C007C1635 /* GADInterstitialDelegate.h */,
+				CC60058D15F4108C007C1635 /* GADRequest.h */,
+				CC60058E15F4108C007C1635 /* GADRequestError.h */,
+				CC60058F15F4108C007C1635 /* libGoogleAdMobAds.a */,
+			);
+			name = AdMob;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -502,7 +536,12 @@
 				GCC_PREFIX_HEADER = "NovosNumerosOnibus/NovosNumerosOnibus-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "NovosNumerosOnibus/NovosNumerosOnibus-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"/Users/rachel/Downloads/GoogleAdMobAdsSdkiOS-6.1.4\"",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = NovosNumerosOnibus;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -517,7 +556,12 @@
 				GCC_PREFIX_HEADER = "NovosNumerosOnibus/NovosNumerosOnibus-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "NovosNumerosOnibus/NovosNumerosOnibus-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"/Users/rachel/Downloads/GoogleAdMobAdsSdkiOS-6.1.4\"",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = NovosNumerosOnibus;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
