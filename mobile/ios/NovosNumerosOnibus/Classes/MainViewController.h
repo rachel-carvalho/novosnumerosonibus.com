@@ -28,9 +28,8 @@
 #import <Cordova/CDVViewController.h>
 #import "GADBannerView.h"
 #import "GADBannerViewDelegate.h"
+#import <iAd/iAd.h>
 
-@interface MainViewController : CDVViewController <GADBannerViewDelegate> {
-    GADBannerView *admobBanner;
-}
+@interface MainViewController : CDVViewController <GADBannerViewDelegate, ADBannerViewDelegate>
 
 @end

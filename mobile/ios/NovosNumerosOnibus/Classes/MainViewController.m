@@ -27,23 +27,29 @@
 
 #import "MainViewController.h"
 
-#define ADMOB_ID @"a15043db386e695";
+NSString *const ADMOB_ID = @"a15043db386e695";
+int const MAX_IAD_ATTEMPTS = 5;
 
 @interface MainViewController ()
+
 @property BOOL isLandscape;
+@property int iadAttempts;
+@property BOOL isAdMobActive;
 
-- (void) updateViewAd: (BOOL) considerBanner;
-
-
+- (void) updateViewAd: (UIView *) ad;
+- (void) updateViewAd: (UIView *) ad init: (BOOL) init;
 @end
 
-@implementation MainViewController
+@implementation MainViewController {
+    GADBannerView *admobBanner;
+    ADBannerView *iadBanner;
+}
 
 - (id) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        
     }
     return self;
 }
@@ -61,7 +67,9 @@
 - (void) viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.isLandscape = UIInterfaceOrientationIsLandscape(self.interfaceOrientation);
+    self.isAdMobActive = NO;
+    self.iadAttempts = 0;
 
     // admob
     admobBanner = [[GADBannerView alloc] initWithAdSize: kGADAdSizeSmartBannerPortrait];
@@ -70,33 +78,91 @@
     admobBanner.rootViewController = self;
     admobBanner.delegate = self;
     admobBanner.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
-
+    
+    [self updateViewAd: admobBanner init: YES];
     [self.view addSubview: admobBanner];
 
-    [admobBanner loadRequest: [GADRequest request]];
-    self.isLandscape = UIInterfaceOrientationIsLandscape(self.interfaceOrientation);
+    // iad
+    iadBanner = [[ADBannerView alloc] init];
+    iadBanner.delegate = self;
+    iadBanner.currentContentSizeIdentifier = self.isLandscape ? ADBannerContentSizeIdentifierLandscape : ADBannerContentSizeIdentifierPortrait;
+    [self updateViewAd: iadBanner init: YES];
+    [self.view addSubview: iadBanner];
 }
 
-- (void) updateViewAd:(BOOL)considerBanner
+// iAd delegate
+- (void)bannerViewDidLoadAd:(ADBannerView *)banner
+{
+    NSLog(@"[iad] ad loaded, %d", banner.isBannerLoaded);
+
+    if(banner.isBannerLoaded)
+        self.iadAttempts = 0;
+
+    [self updateViewAd: banner.isBannerLoaded ? banner : nil];
+}
+
+- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
+{
+    self.iadAttempts++;
+    NSLog(@"[iad] ad not loaded (%d times)", self.iadAttempts);
+
+    if(self.iadAttempts > MAX_IAD_ATTEMPTS){
+        
+        self.isAdMobActive = YES;
+        // removing iad banner
+        [iadBanner removeFromSuperview];
+        iadBanner.delegate = nil;
+        [iadBanner release];
+        iadBanner = nil;
+
+        [admobBanner loadRequest: [GADRequest request]];
+    }
+}
+
+- (void) bannerViewActionDidFinish:(ADBannerView *)banner
+{
+    banner.currentContentSizeIdentifier = self.isLandscape ? ADBannerContentSizeIdentifierLandscape : ADBannerContentSizeIdentifierPortrait;
+
+    [self updateViewAd: banner];
+}
+
+// AdMob delegate
+- (void) adViewDidReceiveAd:(GADBannerView *)view
+{
+    NSLog(@"[admob] new ad");
+    [self updateViewAd: view];
+}
+
+- (void) adView:(GADBannerView *)view didFailToReceiveAdWithError:(GADRequestError *)error
+{
+    [self updateViewAd: view];
+}
+
+- (void) updateViewAd:(UIView *)ad
+{
+    [self updateViewAd:ad init:NO];
+}
+
+- (void) updateViewAd:(UIView *)ad init:(BOOL)init
 {
     CGSize screen = self.view.frame.size;
-    CGSize banner = admobBanner.frame.size;
+    CGSize banner = ad.frame.size;
 
-    if(!considerBanner)
+    NSLog(@"update ad pos: %@, %fx%f", [ad class], banner.width, banner.height);
+
+    if(!ad)
+        ad = self.isAdMobActive ? admobBanner : iadBanner;
+
+    if(!ad || init)
         banner = CGSizeMake(0, 0);
 
     if(self.isLandscape)
         screen = CGSizeMake(screen.height, screen.width);
 
     self.webView.frame = CGRectMake(0, 0, screen.width, screen.height - banner.height);
-    if(considerBanner)
-        admobBanner.frame = CGRectMake(0, self.webView.frame.size.height, screen.width, banner.height);
-}
-
-- (void) adViewDidReceiveAd:(GADBannerView *)view
-{
-    NSLog(@"new ad");
-    [self updateViewAd: YES];
+    CGRect adFrame = ad.frame;
+    adFrame.origin.y = self.webView.frame.size.height;
+    ad.frame = adFrame;
 }
 
 - (void) willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
@@ -106,9 +172,20 @@
     if(self.isLandscape != goingToLandscape){
         NSLog(@"changed orientation");
         self.isLandscape = goingToLandscape;
+
         admobBanner.adSize = goingToLandscape ? kGADAdSizeSmartBannerLandscape : kGADAdSizeSmartBannerPortrait;
-        [admobBanner loadRequest: [GADRequest request]];
-        [self updateViewAd: NO];
+        if(self.isAdMobActive)
+            [admobBanner loadRequest: [GADRequest request]];
+        
+        iadBanner.currentContentSizeIdentifier = goingToLandscape ? ADBannerContentSizeIdentifierLandscape : ADBannerContentSizeIdentifierPortrait;
+
+        UIView *banner = nil;
+        if(!self.isAdMobActive && iadBanner.isBannerLoaded)
+            banner = iadBanner;
+        else if (self.isAdMobActive && !admobBanner.hidden)
+            banner = admobBanner;
+
+        [self updateViewAd: banner];
     }
 }
 
@@ -126,6 +203,7 @@
 }
 
 - (void)dealloc {
+    [iadBanner release];
     [admobBanner release];
     [super dealloc];
 }

@@ -45,6 +45,7 @@
 		30E5649213A7FCAF007403D8 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E5649113A7FCAF007403D8 /* CoreMedia.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		CC60059015F4108C007C1635 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC60058F15F4108C007C1635 /* libGoogleAdMobAds.a */; };
 		CC60059215F410DF007C1635 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC60059115F410DF007C1635 /* MessageUI.framework */; };
+		CC74272215F52698004EFFAE /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC74272115F52698004EFFAE /* iAd.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +133,7 @@
 		CC60058E15F4108C007C1635 /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequestError.h; sourceTree = "<group>"; };
 		CC60058F15F4108C007C1635 /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAdMobAds.a; sourceTree = "<group>"; };
 		CC60059115F410DF007C1635 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		CC74272115F52698004EFFAE /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC74272215F52698004EFFAE /* iAd.framework in Frameworks */,
 				301BF5C5109A6A2B0062928A /* SystemConfiguration.framework in Frameworks */,
 				CC60059215F410DF007C1635 /* MessageUI.framework in Frameworks */,
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
@@ -202,6 +205,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				CC74272115F52698004EFFAE /* iAd.framework */,
 				CC60059115F410DF007C1635 /* MessageUI.framework */,
 				CC60058515F41071007C1635 /* AdMob */,
 				301BF56E109A69640062928A /* www */,

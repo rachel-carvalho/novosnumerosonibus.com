@@ -27,11 +27,7 @@
 		<string>novosnumerosonibus.com</string>
 		<string>*.novosnumerosonibus.com</string>
 		<string>192.168.1.101</string>
-		<string>media.admob.com</string>
-		<string>*.doubleclick.net</string>
-		<string>*.ggpht.com</string>
-		<string>*.gstatic.com</string>
-		<string>*.googlesyndication.com</string>
+		<string>*</string>
 	</array>
 	<key>Plugins</key>
 	<dict>
