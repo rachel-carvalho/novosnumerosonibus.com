@@ -28,7 +28,7 @@
 #import "MainViewController.h"
 
 NSString *const ADMOB_ID = @"a15043db386e695";
-int const MAX_IAD_ATTEMPTS = 5;
+int const MAX_IAD_ATTEMPTS = 0;
 
 @interface MainViewController ()
 
@@ -135,12 +135,12 @@ int const MAX_IAD_ATTEMPTS = 5;
 
 - (void) adView:(GADBannerView *)view didFailToReceiveAdWithError:(GADRequestError *)error
 {
-    [self updateViewAd: view];
+    [self updateViewAd: view init: YES];
 }
 
 - (void) updateViewAd:(UIView *)ad
 {
-    [self updateViewAd:ad init:NO];
+    [self updateViewAd:ad init: NO];
 }
 
 - (void) updateViewAd:(UIView *)ad init:(BOOL)init
