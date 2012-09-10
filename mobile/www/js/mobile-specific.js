@@ -22,6 +22,7 @@ var has_pos_fix = true;
 var pos_fix_support = {Android: 2.2, iPhone: 5, iPad: 5};
 
 var h1 = null;
+var scroll_d = null;
 
 var help = null;
 
@@ -117,6 +118,15 @@ var update_help = function(){
     help.css('opacity', 1).addClass('hidden');
 };
 
+var handle_scroll_d = function(){
+  var end = scroll_d.position().left + scroll_d.outerWidth();
+  var max_w = $(window).width();
+  if(end > max_w) {
+    var diff = end - max_w;
+    scroll_d.width(scroll_d.width() - diff);
+  }      
+};
+
 var searches = [];
 
 var on_search = function(input) {
@@ -126,6 +136,9 @@ var on_search = function(input) {
     
     if(last_search.type != s.type || last_search.value != s.value)
       searches.push(s);
+
+    // prevents scroll down button from leaving the screen
+    handle_scroll_d();
   }
   update_help();
 };
@@ -182,13 +195,14 @@ var readyEvent = function(handler){
   var show_ad = function(){
     cordova.exec(null, null, 'com.novosnumerosonibus.AdMobPlugin', '', []);
   };
-
+  
   var go = function() {
     dbg('after having data');
     
     show_ad();
     
     h1 = $('h1');
+    scroll_d = $('#scroll');
     
     handle_scroll_up();    
     
@@ -201,7 +215,7 @@ var readyEvent = function(handler){
     
     var s = $('#search');
     var inp = s.find('input:first');
-    s.width(inp.position().left + inp.outerWidth() + $('#scroll').outerWidth());
+    s.width(inp.position().left + inp.outerWidth() + scroll_d.outerWidth());
 
     dbg('after setting search width');
     
