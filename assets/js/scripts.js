@@ -65,8 +65,20 @@ var onready = function(){
       active_inpt = prev_inpt.val() ? prev_inpt : curr_inpt;
 
     var off = active_inpt.offset();
-    scroll.css({ top: off.top, left: off.left + active_inpt.outerWidth(), height: active_inpt.outerHeight() });
+    var scroll_pos = { top: off.top, left: off.left + active_inpt.outerWidth(), height: active_inpt.outerHeight() };
+    
+    var end = scroll_pos.left + scroll.outerWidth();
+    var max_w = $(window).width();
+
+    if(end > max_w) {
+      var diff = end - max_w;
+      scroll_pos.width = scroll.width() - diff;
+    }
+		    
+    scroll.css(scroll_pos);
   };
+
+  calculate_button_pos();
   
   $(window).resize(function(){
     calculate_button_pos();

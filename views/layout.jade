@@ -5,7 +5,7 @@ html(lang='pt')
     title Novos números de ônibus no Rio de Janeiro - RJ
     meta(name='description', content='Busque os novos números das linhas de ônibus no RJ a partir do número antigo e vice-versa.')
     link(href='http://novosnumerosonibus.com/', rel='canonical')
-    meta(name='viewport', content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0')
     meta(name='apple-mobile-web-app-capable', content='yes')
     meta(name='apple-mobile-web-app-status-bar-style', content='black')
     link(rel='icon', type='image/png', href='/img/favicon.png')
@@ -14,6 +14,7 @@ html(lang='pt')
     link(rel='apple-touch-icon', sizes='114x114', href='/img/iphone4-icon.png')
     != css('add2home')
     != css('style')
+    
     script(type='text/javascript', src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js')
     != js('scripts')
     != js('add2home')
@@ -44,6 +45,6 @@ html(lang='pt')
     script
       if(!isMobile)
         $('body').addClass('desk');
-
+        
     != body
 

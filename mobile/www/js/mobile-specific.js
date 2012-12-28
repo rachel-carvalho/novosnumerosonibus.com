@@ -118,15 +118,6 @@ var update_help = function(){
     help.css('opacity', 1).addClass('hidden');
 };
 
-var handle_scroll_d = function(){
-  var end = scroll_d.position().left + scroll_d.outerWidth();
-  var max_w = $(window).width();
-  if(end > max_w) {
-    var diff = end - max_w;
-    scroll_d.width(scroll_d.width() - diff);
-  }      
-};
-
 var searches = [];
 
 var on_search = function(input) {
@@ -136,9 +127,6 @@ var on_search = function(input) {
     
     if(last_search.type != s.type || last_search.value != s.value)
       searches.push(s);
-
-    // prevents scroll down button from leaving the screen
-    handle_scroll_d();
   }
   update_help();
 };
