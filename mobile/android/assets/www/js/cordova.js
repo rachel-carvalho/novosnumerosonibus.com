@@ -1,0 +1,1 @@
+../../../../www/js/cordova-2.2.0.android.js

@@ -1,15 +1,15 @@
 package com.novosnumerosonibus;
 
-import org.apache.cordova.api.Plugin;
-import org.apache.cordova.api.PluginResult;
-import org.apache.cordova.api.PluginResult.Status;
+import org.apache.cordova.api.CordovaPlugin;
+import org.apache.cordova.api.CallbackContext;
 import org.json.JSONArray;
+import org.json.JSONException;
 
-public class AdMobPlugin extends Plugin {
+public class AdMobPlugin extends CordovaPlugin {
   @Override
-  public PluginResult execute(String action, JSONArray data, String callback) {
-    ((NovosNumerosActivity)this.ctx).allowAd();
-    return new PluginResult(Status.OK);
+  public boolean execute(String action, JSONArray data, CallbackContext callback) throws JSONException {
+    ((NovosNumerosActivity)cordova.getActivity()).allowAd();
+    return true;
   }
 }
 

@@ -1,1 +1,0 @@
-cordova-1.8.1.android.js

@@ -177,11 +177,11 @@ var readyEvent = function(handler){
     var w = $(window);
     w.scroll(function(){
       var i = $('#result .item:first');
-      if(i.parent().is(':hidden'))
+      if(!i.length || i.parent().is(':hidden'))
         return true;
       var top = w.scrollTop();
       var p = i.position();
-      if( top >= p.top)
+      if(top >= p.top)
         s.removeClass('hidden').stop().animate({top: top + 10}, 400);
       else
         s.addClass('hidden').css('top', '-50px');

@@ -1,38 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.novosnumerosonibus"
-    android:versionCode="2"
-    android:versionName="1.1" >
 
-    <uses-sdk android:minSdkVersion="7" />
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:windowSoftInputMode="adjustPan"
+      package="com.novosnumerosonibus" android:versionName="1.2" android:versionCode="3" android:hardwareAccelerated="true">
+    
+    <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="15"/>
 
-   	<supports-screens 
-	    android:largeScreens="true" 
-	    android:normalScreens="true" 
-	    android:smallScreens="true" 
-	    android:resizeable="true" 
-	    android:anyDensity="true" />
+    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true"
+        android:resizeable="true"
+        android:anyDensity="true"
+        />
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> 
-      
-    <application
-        android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name">
-        <activity
-            android:name=".NovosNumerosActivity"
-            android:label="@string/app_name"
-            android:configChanges="orientation|keyboardHidden">
+
+    <application android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:hardwareAccelerated="true"
+        android:allowBackup="false">
+        <activity android:name="com.novosnumerosonibus.NovosNumerosActivity" android:label="@string/app_name"
+                android:theme="@android:style/Theme.Black.NoTitleBar"
+                android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
         <activity android:name="com.google.ads.AdActivity"
               android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
     </application>
-
-</manifest>
+</manifest> 
