@@ -153,8 +153,11 @@ var onready = function(){
   });
     
   inpts.keydown(function(e) {
-    if (e.keyCode == 13)
+    if (e.keyCode == 13) {
       search();
+      if(!$('#result').is(':hidden'))
+        scroll.click();      
+    }
   });
   
   inpts.keyup(function(){
